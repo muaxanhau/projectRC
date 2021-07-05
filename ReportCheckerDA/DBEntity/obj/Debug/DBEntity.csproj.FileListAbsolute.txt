@@ -1,0 +1,21 @@
+T:\SERCULES\Code C#\ReportCheckerRoot\DBEntity\obj\Debug\DBEntity.csprojResolveAssemblyReference.cache
+T:\SERCULES\Code C#\ReportCheckerRoot\DBEntity\bin\Debug\DBEntity.dll
+T:\SERCULES\Code C#\ReportCheckerRoot\DBEntity\bin\Debug\DBEntity.pdb
+T:\SERCULES\Code C#\ReportCheckerRoot\DBEntity\bin\Debug\EntityFramework.dll
+T:\SERCULES\Code C#\ReportCheckerRoot\DBEntity\obj\Debug\DBEntity.dll
+T:\SERCULES\Code C#\ReportCheckerRoot\DBEntity\obj\Debug\DBEntity.pdb
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerSolution\DBEntity\bin\Debug\DBEntity.dll
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerSolution\DBEntity\bin\Debug\DBEntity.pdb
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerSolution\DBEntity\obj\Debug\DBEntity.csprojResolveAssemblyReference.cache
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerSolution\DBEntity\obj\Debug\DBEntity.dll
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerSolution\DBEntity\obj\Debug\DBEntity.pdb
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerDA\DBEntity\bin\Debug\DBEntity.dll
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerDA\DBEntity\bin\Debug\DBEntity.pdb
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.csprojResolveAssemblyReference.cache
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.dll
+C:\Users\thinh\Desktop\dotnet2\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.pdb
+C:\Users\thinh\Desktop\dotnet\ReportCheckerDA\DBEntity\bin\Debug\DBEntity.dll
+C:\Users\thinh\Desktop\dotnet\ReportCheckerDA\DBEntity\bin\Debug\DBEntity.pdb
+C:\Users\thinh\Desktop\dotnet\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.csprojResolveAssemblyReference.cache
+C:\Users\thinh\Desktop\dotnet\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.dll
+C:\Users\thinh\Desktop\dotnet\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.pdb

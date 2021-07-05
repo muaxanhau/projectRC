@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{58602C20-0C12-48F1-945B-41E09034BCA4}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DBEntity</RootNamespace>
+    <AssemblyName>DBEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\Farmeworks\EntityFarmework\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Context.cs">
+      <Link>Context.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Method.cs">
+      <Link>Method.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Migrations\Configuration.cs">
+      <Link>Migrations\Configuration.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\Buddies\DBColorMap.cs">
+      <Link>Models\Buddies\DBColorMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\Buddies\DBDateAndListItemMap.cs">
+      <Link>Models\Buddies\DBDateAndListItemMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\Buddies\DBItemMap.cs">
+      <Link>Models\Buddies\DBItemMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\Buddies\DBSizeMap.cs">
+      <Link>Models\Buddies\DBSizeMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\Buddies\DBUserMap.cs">
+      <Link>Models\Buddies\DBUserMap.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\DBColor.cs">
+      <Link>Models\DBColor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\DBDateAndListItem.cs">
+      <Link>Models\DBDateAndListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\DBItem.cs">
+      <Link>Models\DBItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\DBSize.cs">
+      <Link>Models\DBSize.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ReportCheckerWA\DBEntity\Models\DBUser.cs">
+      <Link>Models\DBUser.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations" />
+    <Folder Include="Models" />
+    <Folder Include="Models\Buddies" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
