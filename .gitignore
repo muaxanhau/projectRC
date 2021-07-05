@@ -5,3 +5,26 @@
 /ReportCheckerDA/ReportChecker/bin
 /ReportCheckerWA/DBEntity/bin
 /ReportCheckerWA/ReportCheckerWebApi/bin
+
+
+# dependencies
+/report-checker/node_modules
+/report-checker/.pnp
+/report-checker/.pnp.js
+
+# testing
+/report-checker/coverage
+
+# production
+/report-checker/build
+
+# misc
+/report-checker/.DS_Store
+/report-checker/.env.local
+/report-checker/.env.development.local
+/report-checker/.env.test.local
+/report-checker/.env.production.local
+
+/report-checker/npm-debug.log*
+/report-checker/yarn-debug.log*
+/report-checker/yarn-error.log*
