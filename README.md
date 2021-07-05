@@ -3,8 +3,8 @@
 
 
 folder: report-checker
-	=> web app
+	=> web app.
 folder: ReportCheckerDA
-	=> desktop app
+	=> desktop app.
 folder: ReportCheckerWA
-	=> web api
+	=> web api.
