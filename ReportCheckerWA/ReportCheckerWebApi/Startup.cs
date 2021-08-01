@@ -16,7 +16,7 @@ using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Configuration;
 using User = ReportCheckerWebApi.Features.User;
-using StringData = ReportCheckerWebApi.Features.StringData;
+using Data = ReportCheckerWebApi.Features.Data;
 
 namespace ReportCheckerWebApi
 {
@@ -32,6 +32,15 @@ namespace ReportCheckerWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    });
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -57,7 +66,8 @@ namespace ReportCheckerWebApi
             });
 
             services.AddSingleton<User.Login.Method>(new User.Login.Method(jwtKey));
-            services.AddSingleton<StringData.Transform.Method>();
+            services.AddSingleton<Data.Transform.Method>();
+            services.AddSingleton<Data.Store.Method>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,10 +79,12 @@ namespace ReportCheckerWebApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ReportCheckerWebApi v1"));
             }
-
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthentication();
 

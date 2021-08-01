@@ -6,7 +6,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using ReportChecker.Resources.ClassObjects;
+using ReportChecker.Resources.Classes;
 using System.Collections.Generic;
 using ReportChecker.Resources.Views.Forms;
 using System.Linq;

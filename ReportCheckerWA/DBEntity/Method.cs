@@ -20,7 +20,7 @@ namespace DBEntity
             try
             {
                 var context = new Context();
-                var result = context.Users.Where(p => p.Username == username.ToLower() && p.Password == password).FirstOrDefault();
+                var result = context.Users.FirstOrDefault(p => p.Username == username.ToLower() && p.Password == password);
                 return result != null;
             }
             catch
@@ -117,16 +117,32 @@ namespace DBEntity
                     itemBySize = sizeC;
                 }
                 var date = DateTime.Now;
-                context.DateAndListItems.Add(new DBDateAndListItem()
+                var dateAndItem = context.DateAndListItems.FirstOrDefault(p =>
+                    p.Day == date.Day &&
+                    p.Month == date.Month &&
+                    p.Year == date.Year &&
+                    p.Item.Name == itemByName.Name &&
+                    p.Color.Name == itemByColor.Name &&
+                    p.Size.Name == itemBySize.Name
+                );
+                if (dateAndItem == null)
                 {
-                    Day = date.Day,
-                    Month = date.Month,
-                    Year = date.Year,
-                    Item = itemByName,
-                    Color = itemByColor,
-                    Size = itemBySize,
-                    Quantity = quantity
-                });
+                    context.DateAndListItems.Add(new DBDateAndListItem()
+                    {
+                        Day = date.Day,
+                        Month = date.Month,
+                        Year = date.Year,
+                        Item = itemByName,
+                        Color = itemByColor,
+                        Size = itemBySize,
+                        Quantity = quantity
+                    });
+                }
+                else
+                {
+                    dateAndItem.Quantity += quantity;
+                }
+
                 context.SaveChanges();
                 return true;
             }

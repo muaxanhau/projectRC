@@ -15,8 +15,7 @@ namespace ReportChecker.Resources.Views.Forms
 		private Guna.UI2.WinForms.Guna2Elipse eclLogin;
 		private Guna.UI2.WinForms.Guna2Panel pnlMain;
 		private Guna.UI2.WinForms.Guna2Elipse eclMainPanel;
-		private Guna.UI2.WinForms.Guna2HtmlLabel labAppName;
-		private Guna.UI2.WinForms.Guna2PictureBox ptbLogo;
+		private System.Windows.Forms.Label labAppName;
 		private Guna.UI2.WinForms.Guna2ImageButton btnMinimize;
 		private Guna.UI2.WinForms.Guna2ImageButton btnExit;
 		private Guna.UI2.WinForms.Guna2HtmlLabel labLogin;
@@ -24,6 +23,7 @@ namespace ReportChecker.Resources.Views.Forms
 		private Guna.UI2.WinForms.Guna2Button btnLogin;
 		private Guna.UI2.WinForms.Guna2HtmlLabel labAdmin;
 		private Guna.UI2.WinForms.Guna2ProgressIndicator proLoading;
+		private Guna.UI2.WinForms.Guna2PictureBox ptbLogo;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -59,7 +59,7 @@ namespace ReportChecker.Resources.Views.Forms
 			this.btnMinimize = new Guna.UI2.WinForms.Guna2ImageButton();
 			this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
 			this.eclMainPanel = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-			this.labAppName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+			this.labAppName = new System.Windows.Forms.Label();
 			this.ptbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
 			this.pnlMain.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
@@ -222,19 +222,19 @@ namespace ReportChecker.Resources.Views.Forms
 			// 
 			// labAppName
 			// 
-			this.labAppName.BackColor = System.Drawing.Color.Transparent;
-			this.labAppName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labAppName.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.labAppName.Location = new System.Drawing.Point(61, 12);
+			this.labAppName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labAppName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(229)))), ((int)(((byte)(243)))));
+			this.labAppName.Location = new System.Drawing.Point(49, 12);
 			this.labAppName.Name = "labAppName";
-			this.labAppName.Size = new System.Drawing.Size(143, 26);
-			this.labAppName.TabIndex = 1;
+			this.labAppName.Size = new System.Drawing.Size(171, 40);
+			this.labAppName.TabIndex = 16;
 			this.labAppName.Text = "ReportChecker";
+			this.labAppName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// ptbLogo
 			// 
 			this.ptbLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptbLogo.Image")));
-			this.ptbLogo.Location = new System.Drawing.Point(61, 101);
+			this.ptbLogo.Location = new System.Drawing.Point(61, 104);
 			this.ptbLogo.Name = "ptbLogo";
 			this.ptbLogo.ShadowDecoration.Parent = this.ptbLogo;
 			this.ptbLogo.Size = new System.Drawing.Size(143, 136);
@@ -262,7 +262,6 @@ namespace ReportChecker.Resources.Views.Forms
 			this.pnlMain.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 	}

@@ -25,19 +25,19 @@ namespace ReportCheckerWebApi.Controllers
         public IActionResult Login([FromBody] User.Login.RequestBody requestBody)
         {
             var token = loginMethod.Execute(requestBody.Username, requestBody.Password);
-            if (token == null)
+            if (token is null)
             {
                 return Unauthorized();
             }
-            var reponse = new User.Login.ReponseBody("success");
-            reponse.Data.Token = token;
+            var reponse = new User.Login.ReponseBody(token);
+
             return Ok(reponse);
         }
 
         [HttpGet("check-token")]
         public IActionResult CheckToken()
         {
-            return Ok();
+            return NoContent();
         }
     }
 }

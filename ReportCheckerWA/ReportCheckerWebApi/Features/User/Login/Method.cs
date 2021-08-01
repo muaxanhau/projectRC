@@ -10,6 +10,7 @@ namespace ReportCheckerWebApi.Features.User.Login
     public class Method
     {
         private readonly string SecretKey;
+        
         public Method(string key)
         {
             this.SecretKey = key;
