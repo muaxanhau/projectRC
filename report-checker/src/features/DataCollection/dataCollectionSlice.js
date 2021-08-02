@@ -15,6 +15,9 @@ export const dataCollectionSlice = createSlice({
   name: 'dataCollection',
   initialState,
   reducers: {
+    resetDataCollectionState: state => {
+      return initialState
+    },
     setDefaultItemTotals: (state, action) => {
       return {
         ...state,
@@ -137,6 +140,7 @@ export const dataCollectionSlice = createSlice({
 })
 
 export const {
+  resetDataCollectionState,
   setDefaultItemTotals,
   addDataToItemTotals,
   clearItemTotals,

@@ -14,6 +14,7 @@ import RadioButton from './../commons/RadioButton/index'
 import InputTextarea from './../commons/InputTextarea/index'
 import DataTable from './../commons/DataTable/index'
 import DisplayRawData from './../DisplayRawData/index'
+import StoreData from './../../features/StoreData/index'
 import { useDispatch, useSelector } from 'react-redux'
 import { loadingOn, loadingOff } from './../../features/Loading/loadingSlice'
 import { alertOn } from './../../features/Alert/alertSlice'
@@ -33,6 +34,7 @@ const Checker = () => {
   const [rawData, setRawData] = useState('')
   const [temporaryData, setTemporaryData] = useState([])
   const [isDisplayTemporaryData, setIsDisplayTemporaryData] = useState(false)
+  const [isDisplayStoreData, setIsDisplayStoreData] = useState(false)
 
   const transformDataButtonHandle = () => {
     if (rawData.trim() === '' || rawData === null) {
@@ -68,12 +70,7 @@ const Checker = () => {
       return
     }
 
-    dispatch(loadingOn({ text: 'Đang lưu' }))
-    dataApi
-      .store({ items: dataCollection.itemTotals })
-      .then(response => dispatch(alertOn({ text: 'Lưu thành công' })))
-      .catch(e => dispatch(alertOn({ text: 'Không thành công' })))
-      .finally(() => dispatch(loadingOff()))
+    setIsDisplayStoreData(prev => (prev = true))
   }
 
   const okButtonDisplayTemporaryData = data => {
@@ -97,6 +94,12 @@ const Checker = () => {
           dataTable={temporaryData}
           okHandle={okButtonDisplayTemporaryData}
           cancelHandle={cancelButtonDisplayTemporaryData}
+        />
+      )}
+      {isDisplayStoreData && (
+        <StoreData
+          okHandle={() => setIsDisplayStoreData(prev => (prev = false))}
+          cancelHandle={() => setIsDisplayStoreData(prev => (prev = false))}
         />
       )}
       <Wrapper>

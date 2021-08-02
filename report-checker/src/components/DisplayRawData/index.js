@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Params } from './defaultValue'
-import { Container, Wrapper, Content, Main } from './elements'
+import { Container, Wrapper, Content, Main, ButtonArea } from './elements'
 import Title from '../commons/Title/index'
 import ButtonNormal from '../commons/ButtonNormal'
 import InputTextarea from '../commons/InputTextarea/index'
@@ -53,7 +53,6 @@ const DisplayRawData = ({
   return (
     <Container
       onClick={e => {
-        e.preventDefault()
         if (e.target === e.currentTarget) {
           cancelHandle?.()
         }
@@ -70,30 +69,32 @@ const DisplayRawData = ({
             <InputTextarea
               value={dataRaw}
               onChange={() => {}}
-              width='25%'
-              height='100%'
+              width={`calc(100% - ${Params.Table.width})`}
+              height='auto'
             />
             <DataTable
               data={dataTable}
-              width='75%'
-              height='100%'
+              width={Params.Table.width}
+              height={Params.Table.height}
               editable
               onDataChange={data => setDataTemporary(prev => (prev = data))}
             />
           </Main>
         </Content>
-        <ButtonNormal
-          text={Params.Button.name.add}
-          size={Params.Button.size}
-          width={Params.Button.width}
-          onClick={okButtonHandle}
-        />
-        <ButtonNormal
-          text={Params.Button.name.cancel}
-          size={Params.Button.size}
-          width={Params.Button.width}
-          onClick={() => cancelHandle?.()}
-        />
+        <ButtonArea>
+          <ButtonNormal
+            text={Params.Button.name.add}
+            size={Params.Button.size}
+            width={Params.Button.width}
+            onClick={okButtonHandle}
+          />
+          <ButtonNormal
+            text={Params.Button.name.cancel}
+            size={Params.Button.size}
+            width={Params.Button.width}
+            onClick={() => cancelHandle?.()}
+          />
+        </ButtonArea>
       </Wrapper>
     </Container>
   )

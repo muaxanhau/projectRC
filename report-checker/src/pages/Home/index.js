@@ -29,6 +29,7 @@ import {
   setDefaultItemTotals,
   selectDataCollection
 } from './../../features/DataCollection/dataCollectionSlice'
+import { resetRedux } from '../../features/ResetAllState/resetAllStateSlice'
 
 const Home = () => {
   const { path } = useRouteMatch()
@@ -41,6 +42,7 @@ const Home = () => {
       alertOn({
         text: 'Bạn sẽ đăng xuất!',
         okHandle: () => {
+          dispatch(resetRedux())
           localStorage.clear()
           history.push('/login')
         }

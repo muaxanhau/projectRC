@@ -36,6 +36,12 @@ export const GlobalStyle = createGlobalStyle`
         --img-size-large: 160px;
 
         --transition: 250ms;
+
+        --index-1: 100;
+        --index-2: 200;
+        --index-3: 300;
+        --index-4: 400;
+        --index-5: 500;
     }
 
     * {

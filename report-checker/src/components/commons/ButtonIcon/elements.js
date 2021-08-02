@@ -49,7 +49,7 @@ export const Button = styled.button`
         background-color: var(--color-2);
         pointer-events: none;
         border: 1px solid var(--text-color);
-        z-index: 100;
+        z-index: var(--index-2);
         opacity: 0;
       }
 

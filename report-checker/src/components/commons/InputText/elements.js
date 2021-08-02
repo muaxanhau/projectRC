@@ -63,7 +63,6 @@ export const Wrapper = styled.div`
         top: 50%;
         left: var(--padding);
         transform: translateY(-50%);
-        z-index: 50;
       }
     `}
 `

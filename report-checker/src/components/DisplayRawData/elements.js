@@ -1,9 +1,10 @@
 import styled from 'styled-components'
-import { Backdrop } from '../commons/styles/backdrop'
+import { Backdrop } from './../../components/commons/styles/backdrop'
+import { FormLayoutCss } from './../../components/commons/styles/polygon'
 
 export const Container = styled.div`
   ${Backdrop}
-  z-index: 10;
+  z-index: var(--index-3);
 
   & button:hover {
     background-color: var(--color-2);
@@ -11,17 +12,9 @@ export const Container = styled.div`
 `
 export const Wrapper = styled.div`
   width: calc(var(--main-width) * 0.8);
-  height: calc(var(--main-height) * 0.8);
   min-width: calc(var(--main-width) * 0.8);
-  min-height: calc(var(--main-height) * 0.8);
-  clip-path: polygon(95% 0, 100% 10%, 100% 100%, 0 100%, 0 0);
+  ${FormLayoutCss}
   background-color: var(--color-8);
-  position: relative;
-  padding: var(--padding);
-  display: flex;
-  gap: var(--gap-1);
-  justify-content: flex-end;
-  align-items: flex-end;
   transform: scale(0.7);
   animation: kf-scale 0.5s 0s ease-in-out forwards;
 
@@ -32,8 +25,7 @@ export const Wrapper = styled.div`
   }
 `
 export const Content = styled.div`
-  position: absolute;
-  inset: 0 0 calc(var(--padding) * 3.6 + var(--font-size-small)) 0;
+  width: 100%;
   padding: var(--padding);
   background-color: var(--color-9);
   display: flex;
@@ -42,7 +34,13 @@ export const Content = styled.div`
 `
 export const Main = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
+  gap: var(--gap-1);
+`
+export const ButtonArea = styled.div`
+  padding: var(--padding);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: var(--gap-1);
 `

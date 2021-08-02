@@ -14,6 +14,9 @@ export const alertSlice = createSlice({
   name: 'alert',
   initialState,
   reducers: {
+    resetAlertState: state => {
+      return initialState
+    },
     alertOn: (state, action) => {
       const { text, okHandle, cancelHandle } = action.payload
       state.value.text = text
@@ -27,7 +30,7 @@ export const alertSlice = createSlice({
   }
 })
 
-export const { alertOn, alertOff } = alertSlice.actions
+export const { resetAlertState, alertOn, alertOff } = alertSlice.actions
 
 export const selectAlert = state => state.alert.value
 

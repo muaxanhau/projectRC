@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from './saga'
+import resetAllStateReducer from '../features/ResetAllState/resetAllStateSlice'
 import loadingReducer from '../features/Loading/loadingSlice'
 import alertReducer from '../features/Alert/alertSlice'
 import dataCollectionReducer from '../features/DataCollection/dataCollectionSlice'
@@ -9,6 +10,7 @@ const sagaMiddleware = createSagaMiddleware()
 
 export const store = configureStore({
   reducer: {
+    resetAllState: resetAllStateReducer,
     loading: loadingReducer,
     alert: alertReducer,
     dataCollection: dataCollectionReducer

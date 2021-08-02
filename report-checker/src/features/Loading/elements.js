@@ -31,7 +31,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  z-index: 200;
+  z-index: var(--index-5);
 `
 export const Wrapper = styled.div`
   min-width: ${() => {
@@ -76,7 +76,6 @@ const TypeCss = css`
   position: absolute;
   opacity: 0.7;
   width: 7%;
-  z-index: -1;
 
   &:before {
     position: absolute;
