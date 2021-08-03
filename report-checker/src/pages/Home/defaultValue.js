@@ -1,7 +1,7 @@
 import Images from './../../constants/Images'
 import Checker from './../../components/Checker/index'
 import Analyst from './../../components/Analyst/index'
-import Guild from './../../components/Guild/index'
+import Help from '../../components/Help/index'
 
 export const Params = {
   AppLogo: {
@@ -36,6 +36,13 @@ export const Params = {
       normal: Images.DRAFT_ICON.STYLE_1,
       selected: Images.DRAFT_ICON.STYLE_2
     }
+  },
+  ToggleThemeButton: {
+    size: 'small',
+    icon: {
+      type1: Images.MOON_ICON,
+      type2: Images.SUN_ICON
+    }
   }
 }
 export const NavbarData = [
@@ -63,7 +70,7 @@ export const NavbarData = [
       normal: Images.GUILD_ICON.STYLE_1,
       selected: Images.GUILD_ICON.STYLE_2
     },
-    linkTo: '/guild',
-    element: <Guild />
+    linkTo: '/help',
+    element: <Help />
   }
 ]

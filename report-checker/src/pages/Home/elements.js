@@ -71,6 +71,17 @@ export const MainArea = styled.div`
 `
 export const MainHeader = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+export const HeaderLeft = styled.div`
+  display: flex;
+  align-items: center;
+  gap: var(--gap-1);
+`
+export const HeaderRight = styled.div`
+  display: flex;
+  align-items: center;
   gap: var(--gap-1);
 `
 export const MainBody = styled.div`

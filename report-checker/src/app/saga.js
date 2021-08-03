@@ -1,9 +1,9 @@
 import { all } from 'redux-saga/effects'
 import dataCollectionSaga from './../features/DataCollection/dataCollectionSaga'
-import resetAllStateSaga from '../features/ResetAllState/resetAllStateSaga'
+import resetStateSaga from '../features/ResetState/resetStateSaga'
 
 function * rootSaga () {
-  yield all([resetAllStateSaga(), dataCollectionSaga()])
+  yield all([resetStateSaga(), dataCollectionSaga()])
 }
 
 export default rootSaga

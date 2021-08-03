@@ -16,20 +16,24 @@ import {
   NavbarFooter,
   MainArea,
   MainHeader,
+  HeaderLeft,
+  HeaderRight,
   MainBody
 } from './elements'
 import AppLogo from './../../components/commons/AppLogo/index'
 import AppName from './../../components/commons/AppName/index'
 import Navbar from './../../components/Navbar/index'
 import ButtonIcon from './../../components/commons/ButtonIcon/index'
+import ButtonToggle from './../../components/commons/ButtonToggle/index'
 import Version from './../../components/commons/Version/index'
 import { useDispatch, useSelector } from 'react-redux'
+import { toggleTheme } from './../../features/Theme/themeSlice'
 import { alertOn } from './../../features/Alert/alertSlice'
 import {
   setDefaultItemTotals,
   selectDataCollection
 } from './../../features/DataCollection/dataCollectionSlice'
-import { resetRedux } from '../../features/ResetAllState/resetAllStateSlice'
+import { resetStateWhenLogout } from '../../features/ResetState/resetStateSlice'
 
 const Home = () => {
   const { path } = useRouteMatch()
@@ -42,8 +46,7 @@ const Home = () => {
       alertOn({
         text: 'Bạn sẽ đăng xuất!',
         okHandle: () => {
-          dispatch(resetRedux())
-          localStorage.clear()
+          dispatch(resetStateWhenLogout())
           history.push('/login')
         }
       })
@@ -115,20 +118,30 @@ const Home = () => {
           </NavbarArea>
           <MainArea>
             <MainHeader>
-              <ButtonIcon
-                size={Params.RestoreButton.size}
-                icon={Params.RestoreButton.icon.normal}
-                iconSelected={Params.RestoreButton.icon.selected}
-                tooltip={Params.RestoreButton.tooltip}
-                onClick={restoreDraftDataButtonHandle}
-              />
-              <ButtonIcon
-                size={Params.DraftButton.size}
-                icon={Params.DraftButton.icon.normal}
-                iconSelected={Params.DraftButton.icon.selected}
-                tooltip={Params.DraftButton.tooltip}
-                onClick={draftDataButtonHandle}
-              />
+              <HeaderLeft>
+                <ButtonIcon
+                  size={Params.RestoreButton.size}
+                  icon={Params.RestoreButton.icon.normal}
+                  iconSelected={Params.RestoreButton.icon.selected}
+                  tooltip={Params.RestoreButton.tooltip}
+                  onClick={restoreDraftDataButtonHandle}
+                />
+                <ButtonIcon
+                  size={Params.DraftButton.size}
+                  icon={Params.DraftButton.icon.normal}
+                  iconSelected={Params.DraftButton.icon.selected}
+                  tooltip={Params.DraftButton.tooltip}
+                  onClick={draftDataButtonHandle}
+                />
+              </HeaderLeft>
+              <HeaderRight>
+                <ButtonToggle
+                  size={Params.ToggleThemeButton.size}
+                  icon1={Params.ToggleThemeButton.icon.type1}
+                  icon2={Params.ToggleThemeButton.icon.type2}
+                  onClickHandle={() => dispatch(toggleTheme())}
+                />
+              </HeaderRight>
             </MainHeader>
             <MainBody>
               <Switch>

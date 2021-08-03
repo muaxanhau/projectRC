@@ -12,7 +12,7 @@ export const loadingSlice = createSlice({
   name: 'loading',
   initialState,
   reducers: {
-    resetLoadingState: state => {
+    resetState: state => {
       return initialState
     },
     loadingOn: (state, action) => {
@@ -26,7 +26,7 @@ export const loadingSlice = createSlice({
   }
 })
 
-export const { resetLoadingState, loadingOn, loadingOff } = loadingSlice.actions
+export const { resetState, loadingOn, loadingOff } = loadingSlice.actions
 
 export const selectLoading = state => state.loading.value
 

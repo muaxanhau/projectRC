@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.p`
-  --text-color: var(--color-6);
+  --text-color: var(--color-8);
   color: var(--text-color);
   transition: var(--transition);
   cursor: default;

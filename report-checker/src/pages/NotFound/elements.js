@@ -9,7 +9,7 @@ export const Container = styled.div`
 `
 export const Wrapper = styled.div`
   font-size: 6vw;
-  font-family: roboto;
+  font-family: var(--font-family-2);
   background: linear-gradient(
     45deg,
     var(--color-4),

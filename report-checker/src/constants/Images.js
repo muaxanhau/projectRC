@@ -14,6 +14,8 @@ import draft1 from './../assets/images/draft1.png'
 import draft2 from './../assets/images/draft2.png'
 import restore1 from './../assets/images/restore1.png'
 import restore2 from './../assets/images/restore2.png'
+import sun from './../assets/images/sun.png'
+import moon from './../assets/images/moon.png'
 import undo1 from './../assets/images/undo1.png'
 import undo2 from './../assets/images/undo2.png'
 import redo1 from './../assets/images/redo1.png'
@@ -52,6 +54,8 @@ const Images = {
     STYLE_1: restore1,
     STYLE_2: restore2
   },
+  SUN_ICON: sun,
+  MOON_ICON: moon,
   UNDO_ICON: {
     STYLE_1: undo1,
     STYLE_2: undo2

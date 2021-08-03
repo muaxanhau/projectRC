@@ -14,7 +14,7 @@ export const alertSlice = createSlice({
   name: 'alert',
   initialState,
   reducers: {
-    resetAlertState: state => {
+    resetState: state => {
       return initialState
     },
     alertOn: (state, action) => {
@@ -30,7 +30,7 @@ export const alertSlice = createSlice({
   }
 })
 
-export const { resetAlertState, alertOn, alertOff } = alertSlice.actions
+export const { resetState, alertOn, alertOff } = alertSlice.actions
 
 export const selectAlert = state => state.alert.value
 

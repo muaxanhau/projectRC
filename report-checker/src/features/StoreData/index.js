@@ -18,13 +18,7 @@ import { loadingOn, loadingOff } from '../Loading/loadingSlice'
 import { alertOn } from '../Alert/alertSlice'
 import dataApi from '../../api/dataApi'
 
-const s2ab = s => {
-  var buf = new ArrayBuffer(s.length) //convert s to arrayBuffer
-  var view = new Uint8Array(buf) //create uint8array as viewer
-  for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff //convert to octet
-  return buf
-}
-const createExcel = (data = []) => {
+const convertObjectToArray = (data = []) => {
   let arrData = []
   data.forEach((item, itemIndex) =>
     item.colors.forEach((color, colorIndex) =>
@@ -39,25 +33,34 @@ const createExcel = (data = []) => {
       })
     )
   )
-
+  return arrData
+}
+const s2ab = s => {
+  var buf = new ArrayBuffer(s.length) //convert s to arrayBuffer
+  var view = new Uint8Array(buf) //create uint8array as viewer
+  for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff //convert to octet
+  return buf
+}
+const createExcel = (data = []) => {
+  const date = new Date()
   var wb = XLSX.utils.book_new()
   wb.Props = {
     Title: 'ReportChecker',
     Subject: 'ReportChecker',
     Author: 'ReportChecker',
-    CreatedDate: new Date(2017, 12, 19)
+    CreatedDate: new Date(date.getFullYear(), date.getMonth(), date.getDay())
   }
   wb.SheetNames.push('Sheet')
 
-  var ws_data = arrData
+  var ws_data = convertObjectToArray(data)
 
   var ws = XLSX.utils.aoa_to_sheet(ws_data)
 
   wb.Sheets['Sheet'] = ws
 
-  var wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'binary' })
+  const extension = 'xlsx'
+  var wbout = XLSX.write(wb, { bookType: extension, type: 'binary' })
 
-  const date = new Date()
   const nameFile =
     date.getHours() +
     '-' +
@@ -70,7 +73,8 @@ const createExcel = (data = []) => {
     date.getMonth() +
     '-' +
     date.getFullYear() +
-    '.xlsx'
+    '.' +
+    extension
 
   saveAs(
     new Blob([s2ab(wbout)], { type: 'application/octet-stream' }),
