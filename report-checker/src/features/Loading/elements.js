@@ -57,7 +57,7 @@ export const Wrapper = styled.div`
     position: absolute;
     top: 0;
     height: 100%;
-    background-color: var(--color-2);
+    background-color: var(--color-2-11);
     opacity: 0.5;
     filter: blur(10px);
 
@@ -81,7 +81,7 @@ const TypeCss = css`
     position: absolute;
     font-size: 1.3rem;
     width: 120%;
-    color: var(--color-9);
+    color: var(--color-9-6);
     transform: rotate(-45deg);
 
     animation: kf-loading 1s infinite;
@@ -102,8 +102,8 @@ const TypeCss = css`
 export const Type1 = styled.div`
   top: 0;
   left: 40%;
-  background-color: var(--color-4);
-  clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
+  background-color: var(--color-4-3);
+  clip-path: polygon(0 0, 100% 0, 100% 84.5%, 0% 100%);
 
   &:before {
     content: '${({ text }) => text}';
@@ -118,8 +118,8 @@ export const Type1 = styled.div`
 export const Type2 = styled.div`
   bottom: 0;
   right: 40%;
-  background-color: var(--color-5);
-  clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
+  background-color: var(--color-5-3);
+  clip-path: polygon(0 15.5%, 100% 0, 100% 100%, 0% 100%);
 
   &:before {
     content: '${({ text }) => text}';

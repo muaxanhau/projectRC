@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   min-height: var(--main-height);
   display: flex;
   padding: var(--padding);
-  background-color: var(--color-1);
+  background-color: var(--color-1-10);
   border-radius: var(--border-radius-1);
 
   ${Shadow1}
@@ -62,7 +62,7 @@ export const MainArea = styled.div`
   height: 100%;
   padding: calc(var(--shadow-width-inset) * 2);
   border-radius: var(--border-radius-2);
-  background-color: var(--color-6);
+  background-color: var(--color-6-11);
   display: flex;
   flex-direction: column;
   gap: var(--gap-2);

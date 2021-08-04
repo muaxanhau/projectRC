@@ -59,8 +59,8 @@ export const Button = styled.div`
   ${({ active }) =>
     active &&
     css`
-      --text-color: var(--color-2);
-      --background-color: var(--color-6);
+      --text-color: var(--color-2-5);
+      --background-color: var(--color-6-11);
       ${Shadow2}
 
       &:after {
@@ -68,7 +68,7 @@ export const Button = styled.div`
         position: absolute;
         width: calc(var(--shadow-width-inset) * 2);
         height: 100%;
-        background: linear-gradient(90deg, transparent, var(--color-6) 45%);
+        background: linear-gradient(90deg, transparent, var(--color-6-11) 45%);
         top: 0;
         right: 0;
       }

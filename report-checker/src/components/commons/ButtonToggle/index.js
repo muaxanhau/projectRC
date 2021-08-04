@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Wrapper, Circle } from './elements'
-import { useSelector } from 'react-redux'
-import { selectTheme } from '../../../features/Theme/themeSlice'
 
-const ButtonToggle = ({ size, icon1, icon2, onClickHandle }) => {
-  const theme = useSelector(selectTheme)
-  const [isOne, setIsOne] = useState(theme.isLightTheme)
+const ButtonToggle = ({ size, icon1, icon2, isLeft = true, onClickHandle }) => {
+  const [isOne, setIsOne] = useState(isLeft)
   const [icon, setIcon] = useState(icon1)
   const toggleButtonHandle = () => {
     setIsOne(prev => (prev = !prev))

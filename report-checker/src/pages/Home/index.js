@@ -27,7 +27,7 @@ import ButtonIcon from './../../components/commons/ButtonIcon/index'
 import ButtonToggle from './../../components/commons/ButtonToggle/index'
 import Version from './../../components/commons/Version/index'
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleTheme } from './../../features/Theme/themeSlice'
+import { toggleTheme, selectTheme } from './../../features/Theme/themeSlice'
 import { alertOn } from './../../features/Alert/alertSlice'
 import {
   setDefaultItemTotals,
@@ -38,6 +38,7 @@ import { resetStateWhenLogout } from '../../features/ResetState/resetStateSlice'
 const Home = () => {
   const { path } = useRouteMatch()
   const history = useHistory()
+  const theme = useSelector(selectTheme)
   const dataCollection = useSelector(selectDataCollection)
   const dispatch = useDispatch()
 
@@ -139,6 +140,7 @@ const Home = () => {
                   size={Params.ToggleThemeButton.size}
                   icon1={Params.ToggleThemeButton.icon.type1}
                   icon2={Params.ToggleThemeButton.icon.type2}
+                  isLeft={theme.isLightTheme}
                   onClickHandle={() => dispatch(toggleTheme())}
                 />
               </HeaderRight>

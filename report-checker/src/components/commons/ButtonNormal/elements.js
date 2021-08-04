@@ -17,8 +17,8 @@ const fontWeightArr = {
   }
 }
 export const Button = styled.button`
-  --text-color: var(--color-9);
-  --background-color: var(--color-7);
+  --text-color: var(--color-9-7);
+  --background-color: var(--color-7-10);
   width: ${({ width }) => width ?? 'fit-content'};
   padding: calc(var(--padding) * 0.7);
   color: var(--text-color);
@@ -43,7 +43,7 @@ export const Button = styled.button`
     active === true &&
     css`
       --text-color: var(--color-7);
-      --background-color: var(--color-2);
+      --background-color: var(--color-2-9);
       &:before {
         opacity: 1;
       }
@@ -51,7 +51,7 @@ export const Button = styled.button`
 
   &:hover {
     --text-color: var(--color-5);
-    --background-color: var(--color-1);
+    --background-color: var(--color-1-10);
     transition: var(--transition);
 
     &:before {

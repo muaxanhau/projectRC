@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 export const Table = styled.table`
   --height-default: 350px;
   --width-default: 300px;
-  --border: 1px solid var(--color-9);
+  --border: 1px solid var(--color-9-8);
   --border-collapse: collapse;
   border-collapse: var(--border-collapse);
   width: ${({ width }) => width ?? 'var(--width-default)'};
@@ -33,7 +33,7 @@ export const Table = styled.table`
 export const Header = styled.thead`
   display: table;
   width: calc(100% - 17px);
-  background-color: var(--color-8);
+  background-color: var(--color-8-9);
   border: var(--border);
 
   & *:not(:last-child) {
@@ -41,12 +41,12 @@ export const Header = styled.thead`
   }
 `
 export const ColumnTitle = styled.th`
-  color: var(--color-2);
+  color: var(--color-2-5);
   padding: 7px;
   word-break: break-all;
 `
 export const Column = styled.td`
-  color: var(--color-9);
+  color: var(--color-9-7);
   padding: 5px;
   word-break: break-all;
 
@@ -65,7 +65,7 @@ export const Column = styled.td`
     !noneFocus &&
     css`
       &:focus-within {
-        background-color: var(--color-2);
+        background-color: var(--color-2-3);
 
         & * {
           color: var(--color-5);
@@ -82,7 +82,7 @@ export const Row = styled.tr`
   }
 `
 export const Body = styled.tbody`
-  background-color: var(--color-6);
+  background-color: var(--color-6-10);
   border-left: var(--border);
   border-bottom: var(--border);
   display: block;
@@ -93,11 +93,11 @@ export const Body = styled.tbody`
     border-bottom: var(--border);
 
     &:nth-child(even) {
-      background-color: var(--color-7);
+      background-color: var(--color-7-11);
     }
 
     &:nth-child(odd) {
-      background-color: var(--color-6);
+      background-color: var(--color-6-10);
     }
 
     & > ${Column} {
@@ -107,7 +107,7 @@ export const Body = styled.tbody`
 `
 export const Input = styled.input`
   width: 100%;
-  color: var(--color-9);
+  color: var(--color-9-8);
   background-color: transparent;
   border: none;
 

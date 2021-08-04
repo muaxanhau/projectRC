@@ -1,16 +1,15 @@
 export const Params = {
+  Form: {
+    width: 'calc(var(--main-width) * 0.8)'
+  },
   Title: {
-    text: 'Xem trước',
-    size: 'medium',
-    type: 'light'
+    text: 'Xem trước'
   },
   Table: {
     width: '75%',
     height: '350px'
   },
   Button: {
-    size: 'small',
-    width: '120px',
     name: {
       add: 'Thêm',
       cancel: 'Bỏ'

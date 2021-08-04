@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Params } from './defaultValue'
-import { Container, Wrapper, Content, Main, ButtonArea } from './elements'
-import Title from '../commons/Title/index'
-import ButtonNormal from '../commons/ButtonNormal'
+import { Wrapper } from './elements'
+import FormLayout from './../commons/ui/FormLayout/index'
 import InputTextarea from '../commons/InputTextarea/index'
 import DataTable from '../commons/DataTable/index'
 import { useDispatch } from 'react-redux'
@@ -51,52 +50,30 @@ const DisplayRawData = ({
   }
 
   return (
-    <Container
-      onClick={e => {
-        if (e.target === e.currentTarget) {
-          cancelHandle?.()
-        }
-      }}
+    <FormLayout
+      width={Params.Form.width}
+      title={Params.Title.text}
+      textButton1={Params.Button.name.add}
+      textButton2={Params.Button.name.cancel}
+      button1Handle={okButtonHandle}
+      button2Handle={() => cancelHandle?.()}
     >
       <Wrapper>
-        <Content>
-          <Title
-            text={Params.Title.text}
-            size={Params.Title.size}
-            type={Params.Title.type}
-          />
-          <Main>
-            <InputTextarea
-              value={dataRaw}
-              onChange={() => {}}
-              width={`calc(100% - ${Params.Table.width})`}
-              height='auto'
-            />
-            <DataTable
-              data={dataTable}
-              width={Params.Table.width}
-              height={Params.Table.height}
-              editable
-              onDataChange={data => setDataTemporary(prev => (prev = data))}
-            />
-          </Main>
-        </Content>
-        <ButtonArea>
-          <ButtonNormal
-            text={Params.Button.name.add}
-            size={Params.Button.size}
-            width={Params.Button.width}
-            onClick={okButtonHandle}
-          />
-          <ButtonNormal
-            text={Params.Button.name.cancel}
-            size={Params.Button.size}
-            width={Params.Button.width}
-            onClick={() => cancelHandle?.()}
-          />
-        </ButtonArea>
+        <InputTextarea
+          value={dataRaw}
+          onChange={() => {}}
+          width={`calc(100% - ${Params.Table.width})`}
+          height='auto'
+        />
+        <DataTable
+          data={dataTable}
+          width={Params.Table.width}
+          height={Params.Table.height}
+          editable
+          onDataChange={data => setDataTemporary(prev => (prev = data))}
+        />
       </Wrapper>
-    </Container>
+    </FormLayout>
   )
 }
 

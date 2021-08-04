@@ -1,22 +1,14 @@
 import React, { useState } from 'react'
 import { Params } from './defaultValue'
-import XLSX from 'xlsx'
-import { saveAs } from 'file-saver'
-import {
-  Container,
-  Wrapper,
-  Content,
-  Main,
-  Option,
-  ButtonArea
-} from './elements'
-import Title from '../../components/commons/Title/index'
-import ButtonNormal from '../../components/commons/ButtonNormal/index'
+import { Wrapper, Option } from './elements'
+import FormLayout from './../../components/commons/ui/FormLayout/index'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectDataCollection } from './../DataCollection/dataCollectionSlice'
 import { loadingOn, loadingOff } from '../Loading/loadingSlice'
 import { alertOn } from '../Alert/alertSlice'
 import dataApi from '../../api/dataApi'
+import XLSX from 'xlsx'
+import { saveAs } from 'file-saver'
 
 const convertObjectToArray = (data = []) => {
   let arrData = []
@@ -130,61 +122,39 @@ const StoreData = ({ okHandle, cancelHandle }) => {
   }
 
   return (
-    <Container
-      onClick={e => {
-        if (e.target === e.currentTarget) {
-          cancelHandle?.()
-        }
-      }}
+    <FormLayout
+      width={Params.Form.width}
+      title={Params.Title.text}
+      textButton1={Params.Button.name.store}
+      textButton2={Params.Button.name.cancel}
+      button1Handle={storeButtonHandle}
+      button2Handle={cancelButtonHandle}
     >
       <Wrapper>
-        <Content>
-          <Title
-            text={Params.Title.text}
-            size={Params.Title.size}
-            type={Params.Title.type}
+        <Option>
+          <input
+            type='checkbox'
+            id='create-excel'
+            defaultChecked={isCreateExcel}
+            onClick={() => {
+              setIsCreateExcel(prev => (prev = !prev))
+            }}
           />
-          <Main>
-            <Option>
-              <input
-                type='checkbox'
-                id='create-excel'
-                defaultChecked={isCreateExcel}
-                onClick={() => {
-                  setIsCreateExcel(prev => (prev = !prev))
-                }}
-              />
-              <label htmlFor='create-excel'>Tạo file Excel.</label>
-            </Option>
-            <Option>
-              <input
-                type='checkbox'
-                id='store-database'
-                defaultChecked={isStoreDatabase}
-                onClick={() => {
-                  setIsStoreDatabase(prev => (prev = !prev))
-                }}
-              />
-              <label htmlFor='store-database'>Lưu về máy chủ.</label>
-            </Option>
-          </Main>
-        </Content>
-        <ButtonArea>
-          <ButtonNormal
-            text={Params.Button.name.store}
-            size={Params.Button.size}
-            width={Params.Button.width}
-            onClick={storeButtonHandle}
+          <label htmlFor='create-excel'>Tạo file Excel.</label>
+        </Option>
+        <Option>
+          <input
+            type='checkbox'
+            id='store-database'
+            defaultChecked={isStoreDatabase}
+            onClick={() => {
+              setIsStoreDatabase(prev => (prev = !prev))
+            }}
           />
-          <ButtonNormal
-            text={Params.Button.name.cancel}
-            size={Params.Button.size}
-            width={Params.Button.width}
-            onClick={cancelButtonHandle}
-          />
-        </ButtonArea>
+          <label htmlFor='store-database'>Lưu về máy chủ.</label>
+        </Option>
       </Wrapper>
-    </Container>
+    </FormLayout>
   )
 }
 

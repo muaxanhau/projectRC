@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-export const FormLayoutCss = css`
+export const Polygon1 = css`
   --size: 40px;
   clip-path: polygon(
     calc(100% - var(--size)) 0,

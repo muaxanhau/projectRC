@@ -9,8 +9,8 @@ const sizeArr = {
   }
 }
 const typeArr = {
-  dark: 'var(--color-2)',
-  light: 'var(--color-7)',
+  dark: 'var(--color-2-5)',
+  light: 'var(--color-7-5)',
   get default () {
     return this.dark
   }

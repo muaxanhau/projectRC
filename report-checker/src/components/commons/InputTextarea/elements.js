@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Textarea = styled.textarea`
-  color: var(--color-9);
-  background-color: var(--color-6);
+  color: var(--color-9-6);
+  background-color: var(--color-6-10);
   resize: none;
   font-family: 'Segoe UI';
   width: ${({ width }) => (width ? width : '100px')};
@@ -11,6 +11,6 @@ export const Textarea = styled.textarea`
 
   &:focus {
     outline: none;
-    border-color: var(--color-1);
+    border-color: var(--color-1-5);
   }
 `

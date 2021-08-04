@@ -1,7 +1,8 @@
 export const Params = {
+  Form: {
+    width: 'calc(var(--main-width) * 0.6)'
+  },
   Button: {
-    size: 'small',
-    width: '100px',
     name: {
       ok: 'Đồng ý',
       cancel: 'Hủy'

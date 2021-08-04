@@ -1,7 +1,7 @@
 import React from 'react'
 import { Params } from './defaultValue'
-import { Container, Wrapper, Content, Text, ButtonArea } from './elements'
-import ButtonNormal from '../../components/commons/ButtonNormal/index'
+import { Text } from './elements'
+import FormLayout from './../../components/commons/ui/FormLayout/index'
 import { useSelector, useDispatch } from 'react-redux'
 import { alertOff, selectAlert } from './alertSlice'
 
@@ -9,42 +9,26 @@ const Alert = () => {
   const alert = useSelector(selectAlert)
   const dispatch = useDispatch()
 
+  const okButtonHandle = () => {
+    dispatch(alertOff())
+    alert.okHandle?.()
+  }
+  const cancelButtonHandle = () => {
+    dispatch(alertOff())
+    alert.cancelHandle?.()
+  }
+
   if (!alert.isOn) return null
   return (
-    <Container
-      onClick={e => {
-        if (e.target === e.currentTarget) {
-          dispatch(alertOff())
-          alert.cancelHandle?.()
-        }
-      }}
+    <FormLayout
+      width={Params.Form.width}
+      textButton1={Params.Button.name.ok}
+      textButton2={Params.Button.name.cancel}
+      button1Handle={okButtonHandle}
+      button2Handle={cancelButtonHandle}
     >
-      <Wrapper>
-        <Content>
-          <Text>{alert.text}</Text>
-        </Content>
-        <ButtonArea>
-          <ButtonNormal
-            text={Params.Button.name.ok}
-            size={Params.Button.size}
-            width={Params.Button.width}
-            onClick={() => {
-              dispatch(alertOff())
-              alert.okHandle?.()
-            }}
-          />
-          <ButtonNormal
-            text={Params.Button.name.cancel}
-            size={Params.Button.size}
-            width={Params.Button.width}
-            onClick={() => {
-              dispatch(alertOff())
-              alert.cancelHandle?.()
-            }}
-          />
-        </ButtonArea>
-      </Wrapper>
-    </Container>
+      <Text>{alert.text}</Text>
+    </FormLayout>
   )
 }
 

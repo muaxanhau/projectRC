@@ -12,9 +12,9 @@ export const Wrapper = styled.div`
   width: calc(var(--size) * 2);
   height: calc(var(--size) * 0.8);
   border-radius: var(--size);
-  background-color: var(--color-6);
-  box-shadow: 0 0 4px 0.5px var(--color-9) inset,
-    0 0 10px 10px var(--color-7) inset, 0 0 3px var(--color-8);
+  background-color: var(--color-6-11);
+  box-shadow: 0 0 4px 0.5px var(--color-10) inset,
+    0 0 10px 10px var(--color-7-8) inset, 0 0 3px var(--color-8-10);
   position: relative;
 
   & > * {
@@ -38,8 +38,8 @@ export const Circle = styled.div`
     border-radius: 50%;
   }
   &:before {
-    background-color: var(--color-6);
-    box-shadow: 0 0 5px var(--color-9) inset, 0 0 3px var(--color-1);
+    background-color: var(--color-6-10);
+    box-shadow: 0 0 5px var(--color-9) inset, 0 0 3px var(--color-1-9);
   }
 
   &:after {

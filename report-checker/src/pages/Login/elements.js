@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   --height: 350px;
   --width-login-area: 55%;
   border-radius: var(--border-radius-1);
-  background-color: var(--color-1);
+  background-color: var(--color-1-10);
   position: relative;
   min-width: var(--width-total);
   height: var(--height);
@@ -36,12 +36,12 @@ export const Wrapper = styled.div`
   }
   &:before {
     --t-r: -10px;
-    --clr: var(--color-4);
+    --clr: var(--color-4-3);
     --deg: 45deg;
   }
   &:after {
     --b-l: -10px;
-    --clr: var(--color-5);
+    --clr: var(--color-5-3);
     --deg: 225deg;
   }
 `
@@ -60,7 +60,7 @@ export const LoginArea = styled.div`
   height: 100%;
   border-radius: var(--border-radius-2);
   float: right;
-  background-color: var(--color-6);
+  background-color: var(--color-6-11);
   display: flex;
   flex-direction: column;
   justify-content: center;

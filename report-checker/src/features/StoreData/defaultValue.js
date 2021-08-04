@@ -1,15 +1,14 @@
 export const Params = {
+  Form: {
+    width: 'calc(var(--main-width) * 0.5)'
+  },
   Title: {
-    text: 'Lưu trữ',
-    size: 'medium',
-    type: 'light'
+    text: 'Lưu trữ'
   },
   Button: {
-    size: 'small',
-    width: '120px',
     name: {
       store: 'Lưu',
-      cancel: 'Bỏ'
+      cancel: 'Hủy'
     }
   }
 }

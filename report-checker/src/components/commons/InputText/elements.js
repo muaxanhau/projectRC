@@ -11,9 +11,9 @@ const sizeArr = {
 }
 export const Wrapper = styled.div`
   --width-default: 150px;
-  --text-color: var(--color-9);
-  --background-color: var(--color-6);
-  --shadow: 0 0 2px var(--color-9);
+  --text-color: var(--color-9-6);
+  --background-color: var(--color-6-10);
+  --shadow: 0 0 2px var(--color-9-8);
   --padding: 0.5rem;
 
   & > input {
@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
     &:focus,
     &:hover {
       outline: none;
-      border-color: var(--color-1);
+      border-color: var(--color-1-5);
     }
 
     ${Autofill}

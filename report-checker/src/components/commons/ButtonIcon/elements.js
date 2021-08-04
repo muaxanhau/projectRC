@@ -31,8 +31,8 @@ export const Button = styled.button`
     css`
       --arrow-size: 5px;
       --tooltip-width: 100px;
-      --text-color: var(--color-5);
-      --background-color: var(--color-2);
+      --text-color: var(--color-5-9);
+      --background-color: var(--color-2-8);
       position: relative;
 
       &:hover {
@@ -46,7 +46,7 @@ export const Button = styled.button`
       &:before, &:after {
         position: absolute;
         left: 50%;
-        background-color: var(--color-2);
+        background-color: var(--background-color);
         pointer-events: none;
         border: 1px solid var(--text-color);
         z-index: var(--index-2);
