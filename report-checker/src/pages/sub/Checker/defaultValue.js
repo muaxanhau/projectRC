@@ -1,4 +1,4 @@
-import Images from './../../constants/Images'
+import Images from './../../../constants/Images'
 
 export const Params = {
   Title: {

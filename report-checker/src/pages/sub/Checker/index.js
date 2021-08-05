@@ -7,25 +7,25 @@ import {
   ContentRight,
   ControlRightArea
 } from './elements'
-import ButtonNormal from './../commons/ButtonNormal/index'
-import ButtonIcon from './../commons/ButtonIcon/index'
-import Title from './../commons/Title/index'
-import RadioButton from './../commons/RadioButton/index'
-import InputTextarea from './../commons/InputTextarea/index'
-import DataTable from './../commons/DataTable/index'
-import DisplayRawData from './../DisplayRawData/index'
-import StoreData from './../../features/StoreData/index'
+import ButtonNormal from './../../../components/commons/ButtonNormal/index'
+import ButtonIcon from './../../../components/commons/ButtonIcon/index'
+import Title from './../../../components/commons/Title/index'
+import RadioButton from './../../../components/commons/RadioButton/index'
+import InputTextarea from './../../../components/commons/InputTextarea/index'
+import DataTable from './../../../components/commons/DataTable/index'
+import DisplayRawData from './../../../components/DisplayRawData/index'
+import StoreData from './../../../features/StoreData/index'
 import { useDispatch, useSelector } from 'react-redux'
-import { loadingOn, loadingOff } from './../../features/Loading/loadingSlice'
-import { alertOn } from './../../features/Alert/alertSlice'
+import { loadingOn, loadingOff } from './../../../features/Loading/loadingSlice'
+import { alertOn } from './../../../features/Alert/alertSlice'
 import {
   addDataToItemTotals,
   clearItemTotals,
   undoItemTotals,
   redoItemTotals,
   selectDataCollection
-} from './../../features/DataCollection/dataCollectionSlice'
-import dataApi from './../../api/dataApi'
+} from './../../../features/DataCollection/dataCollectionSlice'
+import dataApi from './../../../api/dataApi'
 
 const Checker = () => {
   const dispatch = useDispatch()

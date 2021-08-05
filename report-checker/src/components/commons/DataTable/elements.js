@@ -32,7 +32,7 @@ export const Table = styled.table`
 `
 export const Header = styled.thead`
   display: table;
-  width: calc(100% - 17px);
+  width: calc(100% - var(--scrollbar-width));
   background-color: var(--color-8-9);
   border: var(--border);
 

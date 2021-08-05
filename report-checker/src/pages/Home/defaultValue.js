@@ -1,7 +1,7 @@
 import Images from './../../constants/Images'
-import Checker from './../../components/Checker/index'
-import Analyst from './../../components/Analyst/index'
-import Help from '../../components/Help/index'
+import Checker from './../sub/Checker/index'
+import Analyst from './../sub/Analyst/index'
+import Help from './../sub/Help/index'
 
 export const Params = {
   AppLogo: {
@@ -38,10 +38,11 @@ export const Params = {
     }
   },
   ToggleThemeButton: {
+    tooltip: 'Đổi nền',
     size: 'small',
     icon: {
-      type1: Images.MOON_ICON,
-      type2: Images.SUN_ICON
+      type1: Images.SUN_ICON,
+      type2: Images.MOON_ICON
     }
   }
 }

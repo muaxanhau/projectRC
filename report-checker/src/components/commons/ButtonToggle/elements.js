@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Tooltip } from './../styles/tooltip'
 
 const sizeArr = {
   small: 'var(--img-size-small)',
@@ -14,13 +15,16 @@ export const Wrapper = styled.div`
   border-radius: var(--size);
   background-color: var(--color-6-11);
   box-shadow: 0 0 4px 0.5px var(--color-10) inset,
-    0 0 10px 10px var(--color-7-8) inset, 0 0 3px var(--color-8-10);
+    0 0 10px 10px var(--color-6-10) inset, 0 0 3px var(--color-8-10);
   position: relative;
+  cursor: pointer;
 
   & > * {
     width: var(--size);
     aspect-ratio: 1;
   }
+
+  ${Tooltip}
 `
 export const Circle = styled.div`
   position: absolute;
@@ -38,8 +42,8 @@ export const Circle = styled.div`
     border-radius: 50%;
   }
   &:before {
-    background-color: var(--color-6-10);
-    box-shadow: 0 0 5px var(--color-9) inset, 0 0 3px var(--color-1-9);
+    background-color: var(--color-8-7);
+    box-shadow: 0 0 5px var(--color-9) inset, 0 0 3px var(--color-4-5);
   }
 
   &:after {

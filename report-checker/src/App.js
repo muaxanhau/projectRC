@@ -6,7 +6,9 @@ import {
   Redirect
 } from 'react-router-dom'
 import { GlobalStyle } from './constants/GlobalStyle'
+import ModifyStyles from './features/ModifyStyles/index'
 import Theme from './features/Theme/index'
+import MainBackground from './components/MainBackground/index'
 import Loading from './features/Loading/index'
 import Alert from './features/Alert/index'
 import PrivateRoute from './features/PrivateRoute/index'
@@ -18,7 +20,9 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
+      <ModifyStyles />
       <Theme />
+      <MainBackground />
       <Loading />
       <Alert />
       <Router>

@@ -16,6 +16,7 @@ const typeArr = {
   }
 }
 export const Wrapper = styled.div`
+  text-align: center;
   text-transform: uppercase;
   font-family: var(--font-family-2);
   font-weight: var(--font-bold);

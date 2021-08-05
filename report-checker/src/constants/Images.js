@@ -22,6 +22,7 @@ import redo1 from './../assets/images/redo1.png'
 import redo2 from './../assets/images/redo2.png'
 import trash1 from './../assets/images/trash1.png'
 import trash2 from './../assets/images/trash2.png'
+import member1 from './../assets/images/member1.jpg'
 
 const Images = {
   APP_LOGO: {
@@ -67,6 +68,9 @@ const Images = {
   REMOVE_ICON: {
     STYLE_1: trash1,
     STYLE_2: trash2
+  },
+  MEMBER: {
+    AVATARS: [member1, member1, member1, member1, member1]
   }
 }
 

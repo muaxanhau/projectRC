@@ -11,6 +11,7 @@ export const resetStateSlice = createSlice({
     },
     resetStateWhenLogout: state => {
       localStorage.removeItem('token')
+      localStorage.removeItem('itemsDraft')
     }
   }
 })

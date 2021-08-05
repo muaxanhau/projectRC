@@ -14,8 +14,8 @@ export const GlobalStyle = createGlobalStyle`
         --color-10: rgb(68, 67, 69);
         --color-11: rgb(52, 51, 52);
         
-        --main-width: 970px;
-        --main-height: 600px;
+        --main-width-root: 970px;
+        --main-height-root: 600px;
 
         --border-radius-1: 18px;
         --border-radius-2: 11px;
@@ -27,15 +27,15 @@ export const GlobalStyle = createGlobalStyle`
         --gap-1: 0.5rem;
         --gap-2: 1.1rem;
 
-        --font-size-small: 0.8rem;
-        --font-size-medium: 1.1rem;
-        --font-size-large: 1.8rem;
+        --font-size-small-root: 0.8rem;
+        --font-size-medium-root: 1.1rem;
+        --font-size-large-root: 1.8rem;
         --font-family-2: roboto;
         --font-bold: 600;
 
         --img-size-small: 30px;
-        --img-size-medium: 100px;
-        --img-size-large: 160px;
+        --img-size-medium: 70px;
+        --img-size-large: 180px;
 
         --transition: 250ms;
 
@@ -44,6 +44,8 @@ export const GlobalStyle = createGlobalStyle`
         --index-3: 300;
         --index-4: 400;
         --index-5: 500;
+
+        --scrollbar-width: 10px;
     }
 
     * {
@@ -55,11 +57,28 @@ export const GlobalStyle = createGlobalStyle`
     body {
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(135deg, var(--color-3-4), var(--color-2-8), var(--color-2-6), var(--color-5));
+        overflow: hidden;
 
         #root {
             width: 100%;
             height: 100%;
         }
+    }
+
+
+    ::-webkit-scrollbar {
+        width: var(--scrollbar-width);
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px var(--color-9-8);
+        border-radius: var(--scrollbar-width);
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--color-7-8);
+        box-shadow: inset 0 0 5px var(--color-9-11); 
+        border-radius: calc(var(--scrollbar-width) / 2);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-8-6);
     }
 `

@@ -12,7 +12,7 @@ const RadioButton = ({ data = [], size = 'small', width, valueOnChange }) => {
 
   useEffect(() => {
     valueOnChange?.(value)
-  }, [value, valueOnChange])
+  }, [value])
 
   return (
     <Wrapper width={width}>

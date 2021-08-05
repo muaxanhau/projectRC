@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import { Wrapper, Circle } from './elements'
 
-const ButtonToggle = ({ size, icon1, icon2, isLeft = true, onClickHandle }) => {
-  const [isOne, setIsOne] = useState(isLeft)
+const ButtonToggle = ({
+  size,
+  icon1,
+  icon2,
+  isLeft = true,
+  tooltip,
+  onClickHandle
+}) => {
   const [icon, setIcon] = useState(icon1)
-  const toggleButtonHandle = () => {
-    setIsOne(prev => (prev = !prev))
-    onClickHandle?.()
-  }
+
   useEffect(() => {
-    setIcon(prev => (prev = isOne ? icon1 : icon2))
-  }, [isOne, icon1, icon2])
+    setIcon(prev => (prev = isLeft ? icon1 : icon2))
+  }, [isLeft, icon1, icon2])
+
   return (
-    <Wrapper size={size} onClick={toggleButtonHandle}>
-      <Circle icon={icon} isOne={isOne} />
+    <Wrapper size={size} tooltip={tooltip} onClick={() => onClickHandle?.()}>
+      <Circle icon={icon} isOne={isLeft} />
     </Wrapper>
   )
 }

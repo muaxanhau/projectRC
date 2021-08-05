@@ -8,7 +8,7 @@ const ButtonNavbar = ({ text, icon, iconSelected, linkTo }) => {
   const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
-    setIsActive(prev => (prev = location.pathname === url + linkTo))
+    setIsActive(prev => (prev = location.pathname.includes(url + linkTo)))
   }, [location.pathname, linkTo, url])
 
   return (

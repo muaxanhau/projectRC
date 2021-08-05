@@ -141,6 +141,7 @@ const Home = () => {
                   icon1={Params.ToggleThemeButton.icon.type1}
                   icon2={Params.ToggleThemeButton.icon.type2}
                   isLeft={theme.isLightTheme}
+                  tooltip={Params.ToggleThemeButton.tooltip}
                   onClickHandle={() => dispatch(toggleTheme())}
                 />
               </HeaderRight>
