@@ -5,7 +5,7 @@ export const Tooltip = css`
     tooltip &&
     css`
       --arrow-size: 5px;
-      --tooltip-width: 100px;
+      --tooltip-width: calc(var(--main-width) * 0.1);
       --text-color: var(--color-5-9);
       --background-color: var(--color-2-8);
       position: relative;

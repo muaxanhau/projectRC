@@ -78,6 +78,6 @@ export const GlobalStyle = createGlobalStyle`
         border-radius: calc(var(--scrollbar-width) / 2);
     }
     ::-webkit-scrollbar-thumb:hover {
-        background-color: var(--color-9-4);
+        background-color: var(--color-4-5);
     }
 `
