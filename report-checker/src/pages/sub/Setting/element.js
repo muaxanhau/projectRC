@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+`
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: var(--gap-2);
 `
 export const RangeModifiedArea = styled.table`
@@ -35,5 +38,5 @@ export const Content = styled.th`
 export const ControlArea = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `

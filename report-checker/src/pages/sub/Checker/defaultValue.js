@@ -45,11 +45,5 @@ export const Params = {
         value: 1
       }
     ]
-  },
-  InputTextarea: {
-    height: '270px'
-  },
-  Table: {
-    height: '320px'
   }
 }

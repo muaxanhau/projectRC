@@ -16,6 +16,12 @@ export const CustomeStyles = createGlobalStyle`
           var(--font-size-large-root) * ${fontSizePercent}
         );
 
+        --img-size-small: calc(var(--img-size-small-root) * ${fontSizePercent});
+        --img-size-medium: calc(
+          var(--img-size-medium-root) * ${fontSizePercent}
+        );
+        --img-size-large: calc(var(--img-size-large-root) * ${fontSizePercent});
+
         body {
           filter: brightness(${brightnessPercent});
         }

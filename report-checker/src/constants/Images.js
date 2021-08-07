@@ -1,28 +1,31 @@
 import logo1 from './../assets/images/logo1.svg'
 import logo2 from './../assets/images/logo2.svg'
-import userIcon from './../assets/images/user_icon.png'
-import passwordIcon from './../assets/images/password_icon.png'
-import logoutIcon1 from './../assets/images/logout1.png'
-import logoutIcon2 from './../assets/images/logout2.png'
-import job1 from './../assets/images/job1.png'
-import job2 from './../assets/images/job2.png'
-import analyst1 from './../assets/images/analyst1.png'
-import analyst2 from './../assets/images/analyst2.png'
-import guild1 from './../assets/images/guild1.png'
-import guild2 from './../assets/images/guild2.png'
-import draft1 from './../assets/images/draft1.png'
-import draft2 from './../assets/images/draft2.png'
-import restore1 from './../assets/images/restore1.png'
-import restore2 from './../assets/images/restore2.png'
-import sun from './../assets/images/sun.png'
-import moon from './../assets/images/moon.png'
-import undo1 from './../assets/images/undo1.png'
-import undo2 from './../assets/images/undo2.png'
-import redo1 from './../assets/images/redo1.png'
-import redo2 from './../assets/images/redo2.png'
-import trash1 from './../assets/images/trash1.png'
-import trash2 from './../assets/images/trash2.png'
+import userIcon from './../assets/icons/user.png'
+import passwordIcon from './../assets/icons/password.png'
+import logoutIcon1 from './../assets/icons/logout1.png'
+import logoutIcon2 from './../assets/icons/logout2.png'
+import jobIcon1 from './../assets/icons/job1.png'
+import jobIcon2 from './../assets/icons/job2.png'
+import analystIcon1 from './../assets/icons/analyst1.png'
+import analystIcon2 from './../assets/icons/analyst2.png'
+import guildIcon1 from './../assets/icons/guild1.png'
+import guildIcon2 from './../assets/icons/guild2.png'
+import draftIcon1 from './../assets/icons/draft1.png'
+import draftIcon2 from './../assets/icons/draft2.png'
+import restoreIcon1 from './../assets/icons/restore1.png'
+import restoreIcon2 from './../assets/icons/restore2.png'
+import sunIcon from './../assets/icons/sun.png'
+import moonIcon from './../assets/icons/moon.png'
+import undoIcon1 from './../assets/icons/undo1.png'
+import undoIcon2 from './../assets/icons/undo2.png'
+import redoIcon1 from './../assets/icons/redo1.png'
+import redoIcon2 from './../assets/icons/redo2.png'
+import trashIcon1 from './../assets/icons/trash1.png'
+import trashIcon2 from './../assets/icons/trash2.png'
 import member1 from './../assets/images/member1.jpg'
+import guildImg1 from './../assets/images/guild1.png'
+import menuIcon1 from './../assets/icons/menu1.png'
+import menuIcon2 from './../assets/icons/menu2.png'
 
 const Images = {
   APP_LOGO: {
@@ -36,41 +39,48 @@ const Images = {
     STYLE_2: logoutIcon2
   },
   JOB_ICON: {
-    STYLE_1: job1,
-    STYLE_2: job2
+    STYLE_1: jobIcon1,
+    STYLE_2: jobIcon2
   },
   ANALYST_ICON: {
-    STYLE_1: analyst1,
-    STYLE_2: analyst2
+    STYLE_1: analystIcon1,
+    STYLE_2: analystIcon2
   },
   GUILD_ICON: {
-    STYLE_1: guild1,
-    STYLE_2: guild2
+    STYLE_1: guildIcon1,
+    STYLE_2: guildIcon2
   },
   DRAFT_ICON: {
-    STYLE_1: draft1,
-    STYLE_2: draft2
+    STYLE_1: draftIcon1,
+    STYLE_2: draftIcon2
   },
   RESTORE_ICON: {
-    STYLE_1: restore1,
-    STYLE_2: restore2
+    STYLE_1: restoreIcon1,
+    STYLE_2: restoreIcon2
   },
-  SUN_ICON: sun,
-  MOON_ICON: moon,
+  SUN_ICON: sunIcon,
+  MOON_ICON: moonIcon,
   UNDO_ICON: {
-    STYLE_1: undo1,
-    STYLE_2: undo2
+    STYLE_1: undoIcon1,
+    STYLE_2: undoIcon2
   },
   REDO_ICON: {
-    STYLE_1: redo1,
-    STYLE_2: redo2
+    STYLE_1: redoIcon1,
+    STYLE_2: redoIcon2
   },
   REMOVE_ICON: {
-    STYLE_1: trash1,
-    STYLE_2: trash2
+    STYLE_1: trashIcon1,
+    STYLE_2: trashIcon2
   },
   MEMBER: {
     AVATARS: [member1, member1, member1, member1, member1]
+  },
+  GUILD_IMAGES: {
+    NO_1: guildImg1
+  },
+  MENU_ICON: {
+    STYLE_1: menuIcon1,
+    STYLE_2: menuIcon2
   }
 }
 

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useRouteMatch, useHistory, NavLink } from 'react-router-dom'
-import { Button } from './elements'
+import { Button, Icon, Text } from './elements'
 
-const ButtonNavbar = ({ text, icon, iconSelected, linkTo }) => {
+const ButtonNavbar = ({ text, icon, iconSelected, linkTo, isOpen = true }) => {
   const { location } = useHistory()
   const { url } = useRouteMatch()
   const [isActive, setIsActive] = useState(false)
@@ -11,10 +11,21 @@ const ButtonNavbar = ({ text, icon, iconSelected, linkTo }) => {
     setIsActive(prev => (prev = location.pathname.includes(url + linkTo)))
   }, [location.pathname, linkTo, url])
 
+  if (isActive) {
+    return (
+      <Button isActive={isActive} isOpen={isOpen}>
+        <Icon icon={icon} iconSelected={iconSelected} />
+        <Text>{text}</Text>
+      </Button>
+    )
+  }
   return (
-    <Button active={isActive} icon={icon} iconSelected={iconSelected}>
-      <NavLink to={`${url}${linkTo}`}>{text}</NavLink>
-    </Button>
+    <NavLink to={`${url}${linkTo}`} style={{ textDecoration: 'none' }}>
+      <Button isActive={isActive} isOpen={isOpen}>
+        <Icon icon={icon} iconSelected={iconSelected} />
+        <Text>{text}</Text>
+      </Button>
+    </NavLink>
   )
 }
 

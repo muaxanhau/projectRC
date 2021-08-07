@@ -1,10 +1,14 @@
 import React from 'react'
 import { Wrapper } from './elements'
-import ButtonNavbar from './../commons/ButtonNavbar/index'
+import ButtonNavbar from './../../components/commons/ButtonNavbar/index'
+import { useSelector } from 'react-redux'
+import { selectNavbar } from './navbarSlice'
 
-const Navbar = ({ data = [], width }) => {
+const Navbar = ({ data = [] }) => {
+  const navbar = useSelector(selectNavbar)
+
   return (
-    <Wrapper width={width}>
+    <Wrapper>
       {data?.map((item, index) => (
         <ButtonNavbar
           key={index}
@@ -12,6 +16,7 @@ const Navbar = ({ data = [], width }) => {
           icon={item.icon.normal}
           iconSelected={item.icon.selected}
           linkTo={item.linkTo}
+          isOpen={navbar.isOpen}
         />
       ))}
     </Wrapper>

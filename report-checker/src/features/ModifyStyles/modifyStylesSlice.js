@@ -15,6 +15,10 @@ export const modifyStylesSlice = createSlice({
   initialState,
   reducers: {
     resetState: state => {
+      localStorage.removeItem('appSize')
+      localStorage.removeItem('fontSize')
+      localStorage.removeItem('brightness')
+
       return initialState
     },
     setAppSize: (state, action) => {

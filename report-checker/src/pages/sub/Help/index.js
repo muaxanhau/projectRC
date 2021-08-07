@@ -1,5 +1,11 @@
 import React from 'react'
-import { Switch, Route, useRouteMatch, useHistory } from 'react-router-dom'
+import {
+  Switch,
+  Route,
+  useRouteMatch,
+  useHistory,
+  Redirect
+} from 'react-router-dom'
 import { Params, ContentData } from './defaultValue'
 import { Wrapper, Content } from './elements'
 import RadioButton from '../../../components/commons/RadioButton/index'
@@ -14,27 +20,32 @@ const Help = () => {
   })
 
   return (
-    <Wrapper>
-      <RadioButton
-        data={headerData}
-        size={Params.RadioButton.size}
-        width={Params.RadioButton.width}
-        valueOnChange={val => {
-          history.push(
-            path + ContentData.find(item => item.value === val).linkTo
-          )
-        }}
-      />
-      <Content>
-        <Switch>
-          {ContentData?.map((item, index) => (
-            <Route key={index} path={path + item.linkTo}>
-              {item.element}
-            </Route>
-          ))}
-        </Switch>
-      </Content>
-    </Wrapper>
+    <>
+      {ContentData[0] && (
+        <Redirect from={path} to={path + ContentData[0].linkTo} />
+      )}
+      <Wrapper>
+        <RadioButton
+          data={headerData}
+          size={Params.RadioButton.size}
+          width={Params.RadioButton.width}
+          valueOnChange={val => {
+            history.push(
+              path + ContentData.find(item => item.value === val).linkTo
+            )
+          }}
+        />
+        <Content>
+          <Switch>
+            {ContentData?.map((item, index) => (
+              <Route key={index} path={path + item.linkTo}>
+                {item.element}
+              </Route>
+            ))}
+          </Switch>
+        </Content>
+      </Wrapper>
+    </>
   )
 }
 

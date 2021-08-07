@@ -79,7 +79,7 @@ const TypeCss = css`
 
   &:before {
     position: absolute;
-    font-size: 1.3rem;
+    font-size: calc(var(--font-size-large) * 3 / 4);
     width: 120%;
     color: var(--color-9-6);
     transform: rotate(-45deg);

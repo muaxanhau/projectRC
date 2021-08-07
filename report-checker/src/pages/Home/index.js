@@ -22,7 +22,7 @@ import {
 } from './elements'
 import AppLogo from './../../components/commons/AppLogo/index'
 import AppName from './../../components/commons/AppName/index'
-import Navbar from './../../components/Navbar/index'
+import Navbar from './../../features/Navbar/index'
 import ButtonIcon from './../../components/commons/ButtonIcon/index'
 import ButtonToggle from './../../components/commons/ButtonToggle/index'
 import Version from './../../components/commons/Version/index'
@@ -34,6 +34,7 @@ import {
   selectDataCollection
 } from './../../features/DataCollection/dataCollectionSlice'
 import { resetStateWhenLogout } from '../../features/ResetState/resetStateSlice'
+import { selectNavbar, toggleNavbar } from './../../features/Navbar/navbarSlice'
 
 const Home = () => {
   const { path } = useRouteMatch()
@@ -41,6 +42,7 @@ const Home = () => {
   const theme = useSelector(selectTheme)
   const dataCollection = useSelector(selectDataCollection)
   const dispatch = useDispatch()
+  const navbar = useSelector(selectNavbar)
 
   const logoutButtonHandle = () => {
     dispatch(
@@ -98,13 +100,13 @@ const Home = () => {
       )}
       <Container>
         <Wrapper>
-          <NavbarArea>
+          <NavbarArea isOpen={navbar.isOpen}>
             <NavbarHeader>
               <AppLogo size={Params.AppLogo.size} />
-              <AppName size={Params.AppName.size} />
+              {navbar.isOpen && <AppName size={Params.AppName.size} />}
             </NavbarHeader>
             <NavbarBody>
-              <Navbar data={NavbarData} width={Params.Navbar.width} />
+              <Navbar data={NavbarData} />
             </NavbarBody>
             <NavbarFooter>
               <ButtonIcon
@@ -114,12 +116,26 @@ const Home = () => {
                 tooltip={Params.LogoutButton.tooltip}
                 onClick={logoutButtonHandle}
               />
-              <Version />
+              {navbar.isOpen && <Version />}
             </NavbarFooter>
           </NavbarArea>
           <MainArea>
             <MainHeader>
               <HeaderLeft>
+                {/* <button
+                  onClick={() => {
+                    dispatch(toggleNavbar())
+                  }}
+                >
+                  Toggle
+                </button> */}
+                <ButtonIcon
+                  size={Params.ToggleMenuButton.size}
+                  icon={Params.ToggleMenuButton.icon.normal}
+                  iconSelected={Params.ToggleMenuButton.icon.selected}
+                  tooltip={Params.ToggleMenuButton.tooltip}
+                  onClick={() => dispatch(toggleNavbar())}
+                />
                 <ButtonIcon
                   size={Params.RestoreButton.size}
                   icon={Params.RestoreButton.icon.normal}

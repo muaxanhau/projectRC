@@ -27,15 +27,15 @@ export const GlobalStyle = createGlobalStyle`
         --gap-1: 0.5rem;
         --gap-2: 1.1rem;
 
-        --font-size-small-root: 0.8rem;
-        --font-size-medium-root: 1.1rem;
-        --font-size-large-root: 1.8rem;
+        --font-size-small-root: 13px;
+        --font-size-medium-root: 18px;
+        --font-size-large-root: 29px;
         --font-family-2: roboto;
         --font-bold: 600;
 
-        --img-size-small: 30px;
-        --img-size-medium: 70px;
-        --img-size-large: 180px;
+        --img-size-small-root: 30px;
+        --img-size-medium-root: 70px;
+        --img-size-large-root: 180px;
 
         --transition: 250ms;
 
@@ -70,15 +70,14 @@ export const GlobalStyle = createGlobalStyle`
         width: var(--scrollbar-width);
     }
     ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px var(--color-9-8);
+        background-color: var(--color-7-10);
         border-radius: var(--scrollbar-width);
     }
     ::-webkit-scrollbar-thumb {
-        background-color: var(--color-7-8);
-        box-shadow: inset 0 0 5px var(--color-9-11); 
+        background-color: var(--color-8);
         border-radius: calc(var(--scrollbar-width) / 2);
     }
     ::-webkit-scrollbar-thumb:hover {
-        background-color: var(--color-8-6);
+        background-color: var(--color-9-4);
     }
 `

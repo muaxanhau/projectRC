@@ -23,7 +23,6 @@ const Login = () => {
     userApi
       .login({ username: data.username, password: data.password })
       .then(response => {
-        localStorage.clear()
         localStorage.setItem('token', response.token)
         history.push('/home')
       })

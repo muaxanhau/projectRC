@@ -3,6 +3,7 @@ import { Params } from './defaultValue'
 import {
   Wrapper,
   ContentLeft,
+  MainContent,
   ControlLeftArea,
   ContentRight,
   ControlRightArea
@@ -105,20 +106,22 @@ const Checker = () => {
       <Wrapper>
         <ContentLeft>
           <Title text={Params.Title.name.left} size={Params.Title.size} />
-          <RadioButton
-            data={Params.RadioButton.data}
-            size={Params.ButtonNormal.size}
-            width='100%'
-            valueOnChange={val => {
-              setOption(prev => (prev = val))
-            }}
-          />
-          <InputTextarea
-            width='100%'
-            height={Params.InputTextarea.height}
-            value={rawData}
-            onChange={p => setRawData(prev => (prev = p.target.value))}
-          />
+          <MainContent>
+            <RadioButton
+              data={Params.RadioButton.data}
+              size={Params.ButtonNormal.size}
+              width='100%'
+              valueOnChange={val => {
+                setOption(prev => (prev = val))
+              }}
+            />
+            <InputTextarea
+              width='100%'
+              height='100%'
+              value={rawData}
+              onChange={p => setRawData(prev => (prev = p.target.value))}
+            />
+          </MainContent>
           <ControlLeftArea>
             <ButtonNormal
               text={Params.ButtonNormal.name.transform}
@@ -136,11 +139,13 @@ const Checker = () => {
         </ContentLeft>
         <ContentRight>
           <Title text={Params.Title.name.right} size={Params.Title.size} />
-          <DataTable
-            data={dataCollection.itemTotals}
-            width='100%'
-            height={Params.Table.height}
-          />
+          <MainContent>
+            <DataTable
+              data={dataCollection.itemTotals}
+              width='100%'
+              height='100%'
+            />
+          </MainContent>
           <ControlRightArea>
             <ButtonIcon
               size={Params.ButtonIcon.size}

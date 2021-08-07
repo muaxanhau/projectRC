@@ -30,6 +30,7 @@ export const Tooltip = css`
 
       &:before {
         content: '${tooltip}';
+        font-size: var(--font-size-small);
         text-align: center;
         top: calc(100% + var(--arrow-size) - 1px);
         transform: translateX(calc(var(--arrow-size) * -2));

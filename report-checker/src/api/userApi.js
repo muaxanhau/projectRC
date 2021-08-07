@@ -15,7 +15,7 @@ const userApi = {
         )}`
       }
     }
-    return axiosClient.get(url, config).catch(res => res)
+    return axiosClient.get(url, config)
   }
 }
 

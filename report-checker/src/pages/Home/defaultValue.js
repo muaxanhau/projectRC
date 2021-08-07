@@ -10,8 +10,13 @@ export const Params = {
   AppName: {
     size: 'medium'
   },
-  Navbar: {
-    width: '75%'
+  ToggleMenuButton: {
+    tooltip: 'Bật - tắt menu',
+    size: 'small',
+    icon: {
+      normal: Images.MENU_ICON.STYLE_1,
+      selected: Images.MENU_ICON.STYLE_2
+    }
   },
   LogoutButton: {
     tooltip: 'Đăng xuất',
