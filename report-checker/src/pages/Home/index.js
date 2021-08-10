@@ -58,10 +58,7 @@ const Home = () => {
   const draftDataButtonHandle = () => {
     const items = dataCollection.itemTotals
     if (items.length) {
-      localStorage.setItem(
-        'itemsDraft',
-        JSON.stringify(dataCollection.itemTotals)
-      )
+      localStorage.setItem('itemsDraft', JSON.stringify(items))
       dispatch(
         alertOn({
           text: 'Đã lưu'
@@ -76,8 +73,8 @@ const Home = () => {
     )
   }
   const restoreDraftDataButtonHandle = () => {
-    const items = JSON.parse(localStorage.getItem('itemsDraft')) ?? []
-    if (items.length) {
+    const items = JSON.parse(localStorage.getItem('itemsDraft'))
+    if (items?.length) {
       dispatch(setDefaultItemTotals({ items: items }))
       dispatch(
         alertOn({
@@ -95,9 +92,7 @@ const Home = () => {
 
   return (
     <>
-      {NavbarData[0] && (
-        <Redirect from={path} to={path + NavbarData[0].linkTo} />
-      )}
+      <Redirect from={path} to={path + NavbarData?.[0].linkTo} />
       <Container>
         <Wrapper>
           <NavbarArea isOpen={navbar.isOpen}>
@@ -122,13 +117,6 @@ const Home = () => {
           <MainArea>
             <MainHeader>
               <HeaderLeft>
-                {/* <button
-                  onClick={() => {
-                    dispatch(toggleNavbar())
-                  }}
-                >
-                  Toggle
-                </button> */}
                 <ButtonIcon
                   size={Params.ToggleMenuButton.size}
                   icon={Params.ToggleMenuButton.icon.normal}

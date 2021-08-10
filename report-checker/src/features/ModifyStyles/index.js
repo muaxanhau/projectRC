@@ -19,7 +19,7 @@ const ModifyStyles = () => {
     dispatch(setAppSize(appSizeLocalStorage))
     dispatch(setFontSize(fontSizeLocalStorage))
     dispatch(setBrightness(brightnessLocalStorage))
-  }, [])
+  }, [dispatch])
 
   return (
     <CustomeStyles

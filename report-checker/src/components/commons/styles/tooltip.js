@@ -5,7 +5,7 @@ export const Tooltip = css`
     tooltip &&
     css`
       --arrow-size: 5px;
-      --tooltip-width: calc(var(--main-width) * 0.1);
+      --tooltip-width: calc(var(--main-width) * 0.13);
       --text-color: var(--color-5-9);
       --background-color: var(--color-2-8);
       position: relative;
@@ -31,10 +31,13 @@ export const Tooltip = css`
       &:before {
         content: '${tooltip}';
         font-size: var(--font-size-small);
+        font-family: var(--font-family-2);
+        font-weight: 100;
         text-align: center;
         top: calc(100% + var(--arrow-size) - 1px);
         transform: translateX(calc(var(--arrow-size) * -2));
-        width: var(--tooltip-width);
+        width: max-content;
+        max-width: var(--tooltip-width);
         padding: calc(var(--padding) * 0.7);
         color: var(--text-color);
         border-radius: var(--arrow-size);

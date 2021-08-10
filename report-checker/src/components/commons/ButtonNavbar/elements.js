@@ -29,23 +29,24 @@ export const Button = styled.div`
   border-top-left-radius: var(--border-radius-2);
   border-bottom-left-radius: var(--border-radius-2);
   padding: var(--padding);
-  padding-left: calc(var(--padding) * 2 + var(--font-size));
   background-color: var(--background-color);
   cursor: pointer;
   position: relative;
-  transition: max-width var(--transition);
+  transition: max-width var(--transition), padding var(--transition);
 
   ${({ isOpen }) =>
     isOpen
       ? css`
+          padding-left: calc(var(--padding) * 2 + var(--font-size));
           max-width: calc(var(--main-height) * 0.25);
           transition-delay: var(--transition);
         `
       : css`
+          padding-left: calc(var(--padding) + var(--font-size));
           max-width: 0;
 
           & > ${Icon} {
-            width: 50%;
+            width: 60%;
           }
         `};
 

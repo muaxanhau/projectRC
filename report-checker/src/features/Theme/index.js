@@ -12,7 +12,7 @@ const Theme = () => {
     themeLocalStorage === 'dark' &&
       theme.isLightTheme &&
       dispatch(toggleTheme())
-  }, [])
+  }, [theme.isLightTheme, dispatch])
 
   return theme.isLightTheme ? <ThemeLight /> : <ThemeDark />
 }

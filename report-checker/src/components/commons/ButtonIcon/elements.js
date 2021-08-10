@@ -11,6 +11,7 @@ const sizeArr = {
 export const Button = styled.button`
   width: ${({ size }) => sizeArr[size] ?? sizeArr.default};
   aspect-ratio: 1;
+  flex-shrink: 0;
   border: none;
   cursor: pointer;
   background: url(${({ icon }) => icon});

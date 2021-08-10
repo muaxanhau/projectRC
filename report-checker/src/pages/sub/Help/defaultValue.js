@@ -5,7 +5,7 @@ import Setting from './../Setting/index'
 export const Params = {
   RadioButton: {
     size: 'small',
-    width: '43%'
+    width: 'calc(var(--font-size-small) * 8 * 3)'
   }
 }
 export const ContentData = [

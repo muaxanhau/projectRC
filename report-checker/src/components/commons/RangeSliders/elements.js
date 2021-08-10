@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Tooltip } from './../styles/tooltip'
 
 export const Range = styled.input`

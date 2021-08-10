@@ -19,7 +19,8 @@ const fontWeightArr = {
 export const Button = styled.button`
   --text-color: var(--color-9-7);
   --background-color: var(--color-7-10);
-  width: ${({ width }) => width ?? 'fit-content'};
+  width: ${({ width }) => width ?? 'auto'};
+  white-space: nowrap;
   padding: calc(var(--padding) * 0.7);
   color: var(--text-color);
   background-color: var(--background-color);

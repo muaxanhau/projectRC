@@ -14,7 +14,7 @@ const RangeSliders = ({
 
   useEffect(() => {
     onChangeHandle?.(localValue)
-  }, [localValue])
+  }, [onChangeHandle, localValue])
 
   useEffect(() => {
     setLocalValue(prev => (prev = value))

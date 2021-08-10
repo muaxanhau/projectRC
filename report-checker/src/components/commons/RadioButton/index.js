@@ -21,7 +21,7 @@ const RadioButton = ({ data = [], size = 'small', width, valueOnChange }) => {
           key={index}
           text={item.name}
           size={size}
-          width={buttonWidth}
+          width={width ? buttonWidth : null}
           active={item.value === value}
           onClick={() => clickHandle(item.value)}
         />

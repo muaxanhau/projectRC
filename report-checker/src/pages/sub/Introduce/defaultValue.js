@@ -11,11 +11,11 @@ export const Params = {
       images: Images.MEMBER.AVATARS
     },
     names: [
+      'Trương Tuấn Anh',
       'Hoàng Ngọc Thịnh',
-      'Hoàng Ngọc Thịnh',
-      'Hoàng Ngọc Thịnh',
-      'Hoàng Ngọc Thịnh',
-      'Hoàng Ngọc Thịnh'
+      'Võ Minh Dương',
+      'Phan Gia Nhựt',
+      'Hồ Sơn Thạnh'
     ]
   },
   Title: {
@@ -30,34 +30,41 @@ export const Params = {
 export const MessageData = [
   {
     width: '80%',
-    avatar: Params.Member.avatar.images[0],
-    name: 'Hoàng Ngọc Thịnh',
-    info: 'Quản trị viên',
+    avatar: Params.Member.avatar.images[4],
+    name: 'Hồ Sơn Thạnh',
+    info: 'Thành viên',
     message:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati aut illum! Praesentium delectus laboriosam, quisquam ad hic soluta distinctio quas doloremque alias vel a harum! Dignissimos, corrupti?'
+      'Chúng tôi cố gắng giúp đỡ các bạn trong việc lưu trữ thông tin khách hàng.'
   },
   {
     width: '70%',
-    avatar: Params.Member.avatar.images[0],
+    avatar: Params.Member.avatar.images[1],
     name: 'Hoàng Ngọc Thịnh',
-    info: 'Quản trị viên',
+    info: 'Người phát triển',
     message:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati aut illum! Praesentium delectus laboriosam, quisquam ad hic soluta distinctio quas'
+      'Luôn lắng nghe phản hồi từ các người dùng. Cải tiến các tính năng, tăng trải nghiệm.'
   },
   {
-    width: '100%',
-    avatar: Params.Member.avatar.images[0],
-    name: 'Hoàng Ngọc Thịnh',
-    info: 'Quản trị viên',
+    width: '80%',
+    avatar: Params.Member.avatar.images[3],
+    name: 'Phan GIa Nhựt',
+    info: 'Nhà đồng hành',
     message:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati aut illum! Praesentium delectus laboriosam, quisquam'
+      'Tại sao các bạn nên chọn chúng tôi? Vì nó có tất cả những tính năng phù hợp. Chúng tôi cam kết hỗ trợ người dùng liên tục.'
   },
   {
-    width: '60%',
-    avatar: Params.Member.avatar.images[0],
-    name: 'Hoàng Ngọc Thịnh',
-    info: 'Quản trị viên',
+    width: '90%',
+    avatar: Params.Member.avatar.images[2],
+    name: 'Võ Minh Dương',
+    info: 'Tổng hợp nội dung',
     message:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati aut illum! Praesentium delectus laboriosam, quisquam ad hic soluta distinctio quas'
+      'ReportChecker là một ứng dụng tuyệt vời giúp cho việc bán hàng trực tuyến trở nên dễ dàng, đơn giản, phù hợp với tình hình hiện tại.'
+  },
+  {
+    width: '65%',
+    avatar: Params.Member.avatar.images[0],
+    name: 'Trương Tuấn Anh',
+    info: 'Thành viên',
+    message: 'Các bạn sẽ hài lòng khi trải nghiệm sản phẩm của chúng tôi.'
   }
 ]

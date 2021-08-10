@@ -111,8 +111,8 @@ const Checker = () => {
               data={Params.RadioButton.data}
               size={Params.ButtonNormal.size}
               width='100%'
-              valueOnChange={val => {
-                setOption(prev => (prev = val))
+              valueOnChange={value => {
+                setOption(prev => (prev = value))
               }}
             />
             <InputTextarea

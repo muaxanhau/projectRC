@@ -15,9 +15,10 @@ export const Wrapper = styled.div`
   --background-color: var(--color-6-10);
   --shadow: 0 0 2px var(--color-9-8);
   --padding: 0.5rem;
+  width: ${({ width }) => width ?? 'var(--width-default)'};
 
   & > input {
-    width: ${({ width }) => width ?? 'var(--width-default)'};
+    width: 100%;
     color: var(--text-color);
     background-color: var(--background-color);
     box-shadow: var(--shadow);

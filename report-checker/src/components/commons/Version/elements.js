@@ -4,6 +4,7 @@ export const Wrapper = styled.p`
   --text-color: var(--color-8);
   font-size: var(--font-size-small);
   color: var(--text-color);
+  white-space: nowrap;
   transition: var(--transition);
   cursor: default;
   display: flex;

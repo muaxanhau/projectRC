@@ -50,10 +50,8 @@ const Setting = () => {
             <Item>
               <Name>{Params.Range.appSize.name}</Name>
               <Content>
-                <p>
-                  {Params.Range.appSize.min}
-                  {Params.Range.unit}
-                </p>
+                {Params.Range.appSize.min}
+                {Params.Range.unit}
                 <RangeSliders
                   width={Params.Range.width}
                   min={Params.Range.appSize.min}
@@ -61,21 +59,17 @@ const Setting = () => {
                   value={modifyStyles.appSize}
                   enableTooltip
                   unit={Params.Range.unit}
-                  onChangeHandle={val => setAppSizeC(prev => (prev = val))}
+                  onChangeHandle={value => setAppSizeC(prev => (prev = value))}
                 />
-                <p>
-                  {Params.Range.appSize.max}
-                  {Params.Range.unit}
-                </p>
+                {Params.Range.appSize.max}
+                {Params.Range.unit}
               </Content>
             </Item>
             <Item>
               <Name>{Params.Range.fontSize.name}</Name>
               <Content>
-                <p>
-                  {Params.Range.fontSize.min}
-                  {Params.Range.unit}
-                </p>
+                {Params.Range.fontSize.min}
+                {Params.Range.unit}
                 <RangeSliders
                   width={Params.Range.width}
                   min={Params.Range.fontSize.min}
@@ -83,21 +77,17 @@ const Setting = () => {
                   value={modifyStyles.fontSize}
                   enableTooltip
                   unit={Params.Range.unit}
-                  onChangeHandle={val => setFontSizeC(prev => (prev = val))}
+                  onChangeHandle={value => setFontSizeC(prev => (prev = value))}
                 />
-                <p>
-                  {Params.Range.fontSize.max}
-                  {Params.Range.unit}
-                </p>
+                {Params.Range.fontSize.max}
+                {Params.Range.unit}
               </Content>
             </Item>
             <Item>
               <Name>{Params.Range.brightness.name}</Name>
               <Content>
-                <p>
-                  {Params.Range.brightness.min}
-                  {Params.Range.unit}
-                </p>
+                {Params.Range.brightness.min}
+                {Params.Range.unit}
                 <RangeSliders
                   width={Params.Range.width}
                   min={Params.Range.brightness.min}
@@ -105,18 +95,18 @@ const Setting = () => {
                   value={modifyStyles.brightness}
                   enableTooltip
                   unit={Params.Range.unit}
-                  onChangeHandle={val => setBrightnessC(prev => (prev = val))}
+                  onChangeHandle={value =>
+                    setBrightnessC(prev => (prev = value))
+                  }
                 />
-                <p>
-                  {Params.Range.brightness.max}
-                  {Params.Range.unit}
-                </p>
+                {Params.Range.brightness.max}
+                {Params.Range.unit}
               </Content>
             </Item>
             <Item>
               <Name>{Params.ToggleThemeButton.name}</Name>
               <Content>
-                <p>{Params.ToggleThemeButton.values.val1}</p>
+                {Params.ToggleThemeButton.values.val1}
                 <ButtonToggle
                   size={Params.ToggleThemeButton.size}
                   icon1={Params.ToggleThemeButton.icon.type1}
@@ -124,7 +114,7 @@ const Setting = () => {
                   isLeft={theme.isLightTheme}
                   onClickHandle={() => dispatch(toggleTheme())}
                 />
-                <p>{Params.ToggleThemeButton.values.val2}</p>
+                {Params.ToggleThemeButton.values.val2}
               </Content>
             </Item>
           </TableBody>

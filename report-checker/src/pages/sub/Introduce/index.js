@@ -28,25 +28,23 @@ const Introduce = () => {
       <DetailsArea>
         <Title text={Params.Title.text} size={Params.Title.size} />
         <p>
-          <b style={{ color: 'var(--color-2-5)' }}>Lorem</b> ipsum dolor sit
-          amet, consectetur adipisicing elit. Obcaecati aut{' '}
-          <b style={{ color: 'var(--color-2-5)' }}>illum!</b> Praesentium
-          delectus laboriosam,
-          <i style={{ color: 'var(--color-2-4)' }}> quisquam</i> ad hic soluta
-          distinctio quas <u>doloremque</u> alias vel a harum! Dignissimos,
-          corrupti?
+          <b style={{ color: 'var(--color-2-5)' }}>ReportChecker</b> là một ứng
+          dụng chạy đa nền tảng, mạnh mẽ,
+          <b style={{ color: 'var(--color-2-5)' }}> bảo mật</b> chạy đồng thời
+          song song
+          <i style={{ color: 'var(--color-2-4)' }}> nhiều người dùng.</i> Vậy,
+          chúng tôi mang lại những tính năng độc đáo gì?
         </p>
         <Separator width={Params.Separator.width} />
         <p style={{ width: '60%', margin: 'auto', textAlign: 'center' }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
-          eum
+          Phân tích tự động chuỗi kí tự, độ chính xác cao.
         </p>
         <p style={{ width: '80%', margin: 'auto', textAlign: 'center' }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
-          eum
+          Phân tích dữ liệu từ kho dữ liệu đã lưu trữ, cho người dùng cái nhìn
+          khách quan từ các sản phẩm.
         </p>
         <Separator width={Params.Separator.width} />
-        {MessageData.map((item, index) => (
+        {MessageData?.map((item, index) => (
           <div
             key={index}
             style={{
@@ -65,19 +63,17 @@ const Introduce = () => {
           </div>
         ))}
         <Separator width={Params.Separator.width} />
-        <p>
-          <b style={{ color: 'var(--color-2-5)' }}>Lorem</b> ipsum dolor sit
-          amet, consectetur adipisicing elit. Obcaecati aut{' '}
-          <b style={{ color: 'var(--color-2-5)' }}>illum!</b> Praesentium
-          delectus laboriosam,
-          <i style={{ color: 'var(--color-2-4)' }}> quisquam</i> ad hic soluta
-          distinctio quas <u>doloremque</u> alias vel a harum! Dignissimos,
-          corrupti?
+        <p style={{ width: '100%', margin: 'auto', textAlign: 'center' }}>
+          Cảm ơn các bạn đã sử dụng ứng dụng của chúng tôi, rất mong đồng hành
+          lâu dài cùng bạn.
         </p>
         <Separator width={Params.Separator.width} />
-        <p style={{ width: '60%', margin: 'auto', textAlign: 'center' }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
-          eum
+        <p style={{ width: '80%', margin: 'auto', textAlign: 'center' }}>
+          Mọi phản hồi vui lòng liên hệ qua:
+          <br />
+          SĐT: 01234567890
+          <br />
+          Email: reportchecker@gmail.com
         </p>
       </DetailsArea>
     </Wrapper>

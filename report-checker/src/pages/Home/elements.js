@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   --width-navbar: 22%;
   --width-navbar-collapse: calc(
-    var(--padding) * 3 + var(--img-size-small) * 1.5
+    var(--padding) * 2 + var(--img-size-small) * 1.5
   );
   width: var(--main-width);
   height: var(--main-height);

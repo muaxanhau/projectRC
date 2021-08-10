@@ -22,10 +22,18 @@ import redoIcon1 from './../assets/icons/redo1.png'
 import redoIcon2 from './../assets/icons/redo2.png'
 import trashIcon1 from './../assets/icons/trash1.png'
 import trashIcon2 from './../assets/icons/trash2.png'
-import member1 from './../assets/images/member1.jpg'
+import member1 from './../assets/images/member1.png'
+import member2 from './../assets/images/member2.png'
+import member3 from './../assets/images/member3.png'
+import member4 from './../assets/images/member4.png'
+import member5 from './../assets/images/member5.png'
 import guildImg1 from './../assets/images/guild1.png'
 import menuIcon1 from './../assets/icons/menu1.png'
 import menuIcon2 from './../assets/icons/menu2.png'
+import sortUpIcon from './../assets/icons/sortUp.png'
+import sortDownIcon from './../assets/icons/sortDown.png'
+import searchIcon from './../assets/icons/search.png'
+import checkIcon from './../assets/icons/check.png'
 
 const Images = {
   APP_LOGO: {
@@ -73,7 +81,7 @@ const Images = {
     STYLE_2: trashIcon2
   },
   MEMBER: {
-    AVATARS: [member1, member1, member1, member1, member1]
+    AVATARS: [member1, member2, member3, member4, member5]
   },
   GUILD_IMAGES: {
     NO_1: guildImg1
@@ -81,7 +89,11 @@ const Images = {
   MENU_ICON: {
     STYLE_1: menuIcon1,
     STYLE_2: menuIcon2
-  }
+  },
+  SORT_UP_ICON: sortUpIcon,
+  SORT_DOWN_ICON: sortDownIcon,
+  SEARCH_ICON: searchIcon,
+  CHECK_ICON: checkIcon
 }
 
 export default Images

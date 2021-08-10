@@ -14,26 +14,27 @@ const Help = () => {
   const { path } = useRouteMatch()
   const history = useHistory()
 
-  const headerData = []
-  ContentData.forEach(item => {
-    headerData.push({ name: item.name, value: item.value })
-  })
+  const headerData = ContentData.reduce((headerArr, item) => {
+    headerArr.push({
+      name: item.name,
+      value: item.value
+    })
+    return headerArr
+  }, [])
 
   return (
     <>
-      {ContentData[0] && (
-        <Redirect from={path} to={path + ContentData[0].linkTo} />
-      )}
+      <Redirect from={path} to={path + ContentData?.[0].linkTo} />
       <Wrapper>
         <RadioButton
           data={headerData}
           size={Params.RadioButton.size}
           width={Params.RadioButton.width}
-          valueOnChange={val => {
+          valueOnChange={value =>
             history.push(
-              path + ContentData.find(item => item.value === val).linkTo
+              path + ContentData.find(item => item.value === value).linkTo
             )
-          }}
+          }
         />
         <Content>
           <Switch>

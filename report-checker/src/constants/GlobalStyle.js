@@ -70,7 +70,7 @@ export const GlobalStyle = createGlobalStyle`
         width: var(--scrollbar-width);
     }
     ::-webkit-scrollbar-track {
-        background-color: var(--color-7-10);
+        background-color: var(--color-7);
         border-radius: var(--scrollbar-width);
     }
     ::-webkit-scrollbar-thumb {
