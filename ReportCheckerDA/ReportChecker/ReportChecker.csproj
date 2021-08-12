@@ -63,9 +63,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Constants\CStatic.cs" />
-    <Compile Include="Resources\ClassObjects\CColor.cs" />
-    <Compile Include="Resources\ClassObjects\CItem.cs" />
-    <Compile Include="Resources\ClassObjects\CSize.cs" />
+    <Compile Include="Resources\Classes\CColor.cs" />
+    <Compile Include="Resources\Classes\CItem.cs" />
+    <Compile Include="Resources\Classes\CSize.cs" />
     <Compile Include="Resources\Views\Forms\AfterSave.cs" />
     <Compile Include="Resources\Views\Forms\AfterSave.Designer.cs">
       <DependentUpon>AfterSave.cs</DependentUpon>
@@ -133,7 +133,7 @@
   <ItemGroup>
     <Folder Include="Resources" />
     <Folder Include="Resources\Constants" />
-    <Folder Include="Resources\ClassObjects" />
+    <Folder Include="Resources\Classes" />
     <Folder Include="Resources\Views" />
     <Folder Include="Resources\Views\Forms" />
     <Folder Include="Resources\Views\UserControls" />

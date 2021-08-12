@@ -19,3 +19,8 @@ C:\Users\thinh\Desktop\dotnet\ReportCheckerDA\DBEntity\bin\Debug\DBEntity.pdb
 C:\Users\thinh\Desktop\dotnet\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.csprojResolveAssemblyReference.cache
 C:\Users\thinh\Desktop\dotnet\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.dll
 C:\Users\thinh\Desktop\dotnet\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.pdb
+C:\Users\thinh\Desktop\projectRC\ReportCheckerDA\DBEntity\bin\Debug\DBEntity.dll
+C:\Users\thinh\Desktop\projectRC\ReportCheckerDA\DBEntity\bin\Debug\DBEntity.pdb
+C:\Users\thinh\Desktop\projectRC\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.csprojResolveAssemblyReference.cache
+C:\Users\thinh\Desktop\projectRC\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.dll
+C:\Users\thinh\Desktop\projectRC\ReportCheckerDA\DBEntity\obj\Debug\DBEntity.pdb

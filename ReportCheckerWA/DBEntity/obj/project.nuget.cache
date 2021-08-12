@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xpIuX8C8t/7nIpT+ae+KqHMKPYgA11yqAdt7Ntg7yQegwD9+1dvFEuWoP8V408PZ3dRhWUGDWU82QJph5uzAGg==",
+  "dgSpecHash": "ajKH+5vDdEZ/UcHVQ1MzldcBmMkxEsO05TnzNoFp9Dgx7xf/1LeBdQJ19TRJVjyatdg6jkGqHIbj7I8eW6lKXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thinh\\Desktop\\dotnet\\ReportCheckerWA\\DBEntity\\DBEntity.csproj",
+  "projectFilePath": "C:\\Users\\thinh\\Desktop\\projectRC\\ReportCheckerWA\\DBEntity\\DBEntity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thinh\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\thinh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1031,11 +1031,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thinh\\Desktop\\dotnet\\ReportCheckerWA\\DBEntity\\DBEntity.csproj",
+      "projectUniqueName": "C:\\Users\\thinh\\Desktop\\projectRC\\ReportCheckerWA\\DBEntity\\DBEntity.csproj",
       "projectName": "DBEntity",
-      "projectPath": "C:\\Users\\thinh\\Desktop\\dotnet\\ReportCheckerWA\\DBEntity\\DBEntity.csproj",
+      "projectPath": "C:\\Users\\thinh\\Desktop\\projectRC\\ReportCheckerWA\\DBEntity\\DBEntity.csproj",
       "packagesPath": "C:\\Users\\thinh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thinh\\Desktop\\dotnet\\ReportCheckerWA\\DBEntity\\obj\\",
+      "outputPath": "C:\\Users\\thinh\\Desktop\\projectRC\\ReportCheckerWA\\DBEntity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1087,7 +1087,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "B8NJfHaHEsAEJIQFCv6x02pURcnD2GYY/osqV+LbL3GsYaIarlWJfgVAadTDAQ9kncClGQwI2hlSIU/eiObH8Q==",
+  "dgSpecHash": "iwR605y7U5EIUlY+dks0N+dTaIG4R/qRvWJQ7Z4i1TtyLjb7oHmm2qAN6KkRjUC14MSpa1hAelMV2x0W1CU9+Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thinh\\Desktop\\dotnet\\ReportCheckerWA\\ReportCheckerWebApi\\ReportCheckerWebApi.csproj",
+  "projectFilePath": "C:\\Users\\thinh\\Desktop\\projectRC\\ReportCheckerWA\\ReportCheckerWebApi\\ReportCheckerWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thinh\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\thinh\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\thinh\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\thinh\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\thinh\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.7\\microsoft.aspnetcore.authentication.jwtbearer.5.0.7.nupkg.sha512",
+    "C:\\Users\\thinh\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\thinh\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\thinh\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",
     "C:\\Users\\thinh\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\2.2.0\\microsoft.aspnetcore.dataprotection.abstractions.2.2.0.nupkg.sha512",
