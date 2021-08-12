@@ -15,11 +15,22 @@ namespace ReportCheckerWebApi.Controllers
     {
         private readonly Data.Transform.Method transformMethod;
         private readonly Data.Store.Method storeMethod;
+        private readonly Data.GetAllItemsAndDetails.Method getAllItemsAndDetailsMethod;
+        private readonly Data.GetAllNameOfItems.Method getAllNameOfItemsMethod;
+        private readonly Data.GetItemDetailByName.Method getItemDetailByNameMethod;
 
-        public DataController(Data.Transform.Method transformMethod, Data.Store.Method storeMethod)
-        {
+        public DataController(
+            Data.Transform.Method transformMethod, 
+            Data.Store.Method storeMethod, 
+            Data.GetAllItemsAndDetails.Method getAllItemsAndDetailsMethod,
+            Data.GetAllNameOfItems.Method getAllNameOfItemsMethod,
+            Data.GetItemDetailByName.Method getItemDetailByNameMethod
+        ) {
             this.transformMethod = transformMethod;
             this.storeMethod = storeMethod;
+            this.getAllItemsAndDetailsMethod = getAllItemsAndDetailsMethod;
+            this.getAllNameOfItemsMethod = getAllNameOfItemsMethod;
+            this.getItemDetailByNameMethod = getItemDetailByNameMethod;
         }
 
         [HttpPost("transform")]
@@ -38,6 +49,24 @@ namespace ReportCheckerWebApi.Controllers
         {
             var result = storeMethod.Execute(requestBody.Items);
             return result ? NoContent() : BadRequest();
+        }
+        [HttpGet("get-all-items-and-details")]
+        public IActionResult GetAllItemsAndDetails()
+        {
+            var result = getAllItemsAndDetailsMethod.Execute();
+            return Ok(result);
+        }
+        [HttpGet("get-all-name-of-items")]
+        public IActionResult GetAllNameOfItems()
+        {
+            var result = getAllNameOfItemsMethod.Execute();
+            return Ok(result);
+        }
+        [HttpPost("get-item-detail-by-name")]
+        public IActionResult GetItemDetailByName([FromBody] Data.GetItemDetailByName.RequestBody requestBody)
+        {
+            var result = getItemDetailByNameMethod.Execute(requestBody.Name);
+            return Ok(result);
         }
     }
 }

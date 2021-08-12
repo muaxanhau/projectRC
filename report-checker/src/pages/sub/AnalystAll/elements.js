@@ -98,3 +98,8 @@ export const SortIcon = styled.img`
   object-fit: cover;
   margin-left: calc(var(--font-size) / 4);
 `
+export const StatusIcon = styled.img`
+  width: var(--font-size);
+  aspect-ratio: 1;
+  object-fit: cover;
+`

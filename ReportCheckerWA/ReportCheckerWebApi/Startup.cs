@@ -68,6 +68,9 @@ namespace ReportCheckerWebApi
             services.AddSingleton<User.Login.Method>(new User.Login.Method(jwtKey));
             services.AddSingleton<Data.Transform.Method>();
             services.AddSingleton<Data.Store.Method>();
+            services.AddSingleton<Data.GetAllItemsAndDetails.Method>();
+            services.AddSingleton<Data.GetAllNameOfItems.Method>();
+            services.AddSingleton<Data.GetItemDetailByName.Method>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

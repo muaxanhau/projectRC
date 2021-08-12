@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container, Wrapper } from './elements'
 
-const AnalystChart = () => {
+const LoadingLocal = () => {
   return (
     <Container>
-      <Wrapper>Tính năng sắp có trong tương lai</Wrapper>
+      <Wrapper>Đang xử lí...</Wrapper>
     </Container>
   )
 }
 
-export default AnalystChart
+export default LoadingLocal

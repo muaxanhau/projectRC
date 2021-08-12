@@ -34,6 +34,11 @@ import sortUpIcon from './../assets/icons/sortUp.png'
 import sortDownIcon from './../assets/icons/sortDown.png'
 import searchIcon from './../assets/icons/search.png'
 import checkIcon from './../assets/icons/check.png'
+import arrowUpIcon from './../assets/icons/arrowUp.png'
+import arrowUpRightIcon from './../assets/icons/arrowUpRight.png'
+import arrowBalanceIcon from './../assets/icons/arrowBalance.png'
+import arrowDownRightIcon from './../assets/icons/arrowDownRight.png'
+import arrowDownIcon from './../assets/icons/arrowDown.png'
 
 const Images = {
   APP_LOGO: {
@@ -93,7 +98,12 @@ const Images = {
   SORT_UP_ICON: sortUpIcon,
   SORT_DOWN_ICON: sortDownIcon,
   SEARCH_ICON: searchIcon,
-  CHECK_ICON: checkIcon
+  CHECK_ICON: checkIcon,
+  ARROW_UP_ICON: arrowUpIcon,
+  ARROW_UP_RIGHT_ICON: arrowUpRightIcon,
+  ARROW_BALANCE_ICON: arrowBalanceIcon,
+  ARROW_DOWN_RIGHT_ICON: arrowDownRightIcon,
+  ARROW_DOWN_ICON: arrowDownIcon
 }
 
 export default Images

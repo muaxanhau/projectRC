@@ -60,9 +60,9 @@ const createExcel = (data = []) => {
     '-' +
     date.getSeconds() +
     '_' +
-    date.getDay() +
+    date.getDate() +
     '-' +
-    date.getMonth() +
+    (date.getMonth() + 1) +
     '-' +
     date.getFullYear() +
     '.' +

@@ -151,5 +151,17 @@ namespace DBEntity
                 return false;
             }
         }
+        public static List<DBItem> getAllItems()
+        {
+            var context = new Context();
+
+            return context.Items.ToList();
+        }
+        public static List<DBDateAndListItem> getAllDateAndListItems()
+        {
+            var context = new Context();
+
+            return context.DateAndListItems.ToList();
+        }
     }
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Images from '../../../constants/Images'
-import { Params, tableFakeData } from './defaultValue'
+import { Params } from './defaultValue'
 import {
   Table,
   Header,
@@ -8,10 +8,21 @@ import {
   Row,
   ColumnTitle,
   SortIcon,
-  Column
+  Column,
+  StatusIcon
 } from './elements'
+import LoadingLocal from './../../../components/commons/LoadingLocal/index'
+import dataApi from './../../../api/dataApi'
 
-const sortData = (data = [], position, condition) => {
+const imagesArr = [
+  Images.ARROW_DOWN_ICON,
+  Images.ARROW_DOWN_RIGHT_ICON,
+  Images.ARROW_BALANCE_ICON,
+  Images.ARROW_UP_RIGHT_ICON,
+  Images.ARROW_UP_ICON
+]
+
+const sortData = (data = [], position, condition = -1) => {
   return position
     ? [...data].sort((a, b) => (a[position] - b[position]) * condition)
     : [...data].sort(
@@ -25,15 +36,10 @@ const AnalystAll = () => {
   const [condition, setCondition] = useState(-1)
 
   useEffect(() => {
-    setTimeout(() => {
-      const fakeData = new Promise((resolve, reject) => {
-        setDataTable(prev => (prev = tableFakeData))
-        resolve()
-      })
-      fakeData.finally(() => {
-        setSortStatus(prev => (prev = 0))
-      })
-    }, 0)
+    dataApi.getAllItemsAndDetails().then(response => {
+      setDataTable(prev => (prev = response))
+      setSortStatus(prev => (prev = 0))
+    })
   }, [])
 
   useEffect(() => {
@@ -44,7 +50,7 @@ const AnalystAll = () => {
     setDataTable(prev => (prev = sortData(dataTable, sortStatus, condition)))
   }, [sortStatus, condition])
 
-  return (
+  return dataTable.length ? (
     <Table columnWidth={Params.TableHeader.map(item => item.width)}>
       <Header>
         <Row>
@@ -79,14 +85,22 @@ const AnalystAll = () => {
             <Column>{index + 1}</Column>
             <Column style={{ textAlign: 'left' }}>{item[0]}</Column>
             <Column>{item[1]}</Column>
-            <Column>{item[2]}</Column>
-            <Column>{item[3]}</Column>
-            <Column>{item[4]}</Column>
-            <Column>{item[5]}</Column>
+            <Column>{parseInt(item[2]) === -1 ? '-' : item[2]}</Column>
+            <Column>{parseInt(item[3]) === -1 ? '-' : item[3]}</Column>
+            <Column>{parseInt(item[4]) === -1 ? '-' : item[4]}</Column>
+            <Column>
+              {parseInt(item[5]) === -1 ? (
+                '-'
+              ) : (
+                <StatusIcon src={imagesArr[item[5] - 1]} />
+              )}
+            </Column>
           </Row>
         ))}
       </Body>
     </Table>
+  ) : (
+    <LoadingLocal />
   )
 }
 
