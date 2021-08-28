@@ -8,3 +8,5 @@ folder: ReportCheckerDA
 	=> desktop app.
 folder: ReportCheckerWA
 	=> web api.
+
+	check
