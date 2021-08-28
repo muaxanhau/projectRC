@@ -14,8 +14,7 @@ export const Params = {
       'Trương Tuấn Anh',
       'Hoàng Ngọc Thịnh',
       'Võ Minh Dương',
-      'Phan Gia Nhựt',
-      'Hồ Sơn Thạnh'
+      'Phan Gia Nhựt'
     ]
   },
   Title: {
@@ -29,20 +28,12 @@ export const Params = {
 
 export const MessageData = [
   {
-    width: '80%',
-    avatar: Params.Member.avatar.images[4],
-    name: 'Hồ Sơn Thạnh',
-    info: 'Thành viên',
-    message:
-      'Chúng tôi cố gắng giúp đỡ các bạn trong việc lưu trữ thông tin khách hàng.'
-  },
-  {
-    width: '70%',
+    width: '95%',
     avatar: Params.Member.avatar.images[1],
     name: 'Hoàng Ngọc Thịnh',
     info: 'Người phát triển',
     message:
-      'Luôn lắng nghe phản hồi từ các người dùng. Cải tiến các tính năng, tăng trải nghiệm.'
+      'Chúng tôi cố gắng giúp đỡ các bạn trong việc lưu trữ thông tin khách hàng. Luôn lắng nghe phản hồi từ các người dùng. Cải tiến các tính năng, tăng trải nghiệm.'
   },
   {
     width: '80%',

@@ -26,7 +26,6 @@ import member1 from './../assets/images/member1.png'
 import member2 from './../assets/images/member2.png'
 import member3 from './../assets/images/member3.png'
 import member4 from './../assets/images/member4.png'
-import member5 from './../assets/images/member5.png'
 import guildImg1 from './../assets/images/guild1.png'
 import menuIcon1 from './../assets/icons/menu1.png'
 import menuIcon2 from './../assets/icons/menu2.png'
@@ -86,7 +85,7 @@ const Images = {
     STYLE_2: trashIcon2
   },
   MEMBER: {
-    AVATARS: [member1, member2, member3, member4, member5]
+    AVATARS: [member1, member2, member3, member4]
   },
   GUILD_IMAGES: {
     NO_1: guildImg1
