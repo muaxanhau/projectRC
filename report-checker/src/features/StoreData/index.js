@@ -93,10 +93,12 @@ const StoreData = ({ okHandle, cancelHandle }) => {
         return reject(false)
       }
     })
+
     const storeDBPromise = new Promise((resolve, reject) => {
       if (!isStoreDatabase) {
         return resolve(false)
       }
+
       dataApi
         .store({ items: dataCollection.itemTotals })
         .then(response => resolve(true))
