@@ -44,8 +44,9 @@ export const dataCollectionSlice = createSlice({
                   element => element.name === size.name
                 )
                 if (sizeTmp) {
-                  sizeTmp.quantity =
+                  sizeTmp.quantity = (
                     parseInt(sizeTmp.quantity) + parseInt(size.quantity)
+                  ).toString()
                 } else {
                   colorTmp.sizes.push(size)
                 }

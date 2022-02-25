@@ -21,28 +21,18 @@ export const Wrapper = styled.div`
   position: relative;
 
   ${Shadow1}
-  &:before, &:after {
+  &:before {
     content: '';
     position: absolute;
-    inset: var(--t-r, 0) var(--t-r, 0) var(--b-l, 0) var(--b-l, 0);
+    inset: -10px;
     background: linear-gradient(
-      var(--deg),
+      45deg,
+      var(--color-5-3),
       transparent,
-      transparent,
-      var(--clr)
+      var(--color-4-3)
     );
     filter: blur(20px);
     z-index: -1;
-  }
-  &:before {
-    --t-r: -10px;
-    --clr: var(--color-4-3);
-    --deg: 45deg;
-  }
-  &:after {
-    --b-l: -10px;
-    --clr: var(--color-5-3);
-    --deg: 225deg;
   }
 `
 export const IntroArea = styled.div`
